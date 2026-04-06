@@ -1,0 +1,17 @@
+{
+  "name": "braze-agency",
+  "owner": {
+    "name": "Delta and Beta"
+  },
+  "metadata": {
+    "description": "Braze specialist agents for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "braze",
+      "source": ".",
+      "description": "Braze platform specialist agency — 9 AI agents backed by 166 skills and 1,304 topic references",
+      "version": "1.0.0"
+    }
+  ]
+}
