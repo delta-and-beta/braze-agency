@@ -1,8 +1,11 @@
 {
   "name": "braze",
   "description": "Braze platform specialist agency — 9 AI agents backed by 166 skills and 1,304 topic references",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Delta and Beta"
-  }
+  },
+  "commands": ["./commands/"],
+  "agents": ["./agents/"],
+  "skills": []
 }
