@@ -52,7 +52,7 @@ description: >-
   launches, canvas journey designs, and multi-step engagement flows using
   performance data., Defines audience segments, manages content templates and
   translations, and curates media assets.
-model: opus
+model: inherit
 tools:
   - Read
   - Glob

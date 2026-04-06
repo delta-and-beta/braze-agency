@@ -3,7 +3,7 @@ name: braze-consultant
 description: >-
   Synthesizes multiple role perspectives into coherent answers with big picture
   and details
-model: opus
+model: inherit
 tools:
   - Read
   - Glob

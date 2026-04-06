@@ -1,7 +1,7 @@
 ---
 name: braze-researcher
 description: Fetches and reads documentation for roles
-model: haiku
+model: inherit
 tools:
   - Read
   - Glob

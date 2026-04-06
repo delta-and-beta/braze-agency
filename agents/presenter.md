@@ -3,7 +3,7 @@ name: braze-presenter
 description: >-
   Transforms content into beautifully formatted output with flowcharts and
   visual elements
-model: sonnet
+model: inherit
 tools:
   - Read
   - Glob

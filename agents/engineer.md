@@ -74,7 +74,7 @@ description: >-
   and subscription group endpoints for multi-channel communication., Implements
   platform-level endpoints for SDK authentication, SCIM provisioning, user data,
   templates, and media.
-model: opus
+model: inherit
 tools:
   - Read
   - Glob

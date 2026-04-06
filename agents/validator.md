@@ -1,7 +1,7 @@
 ---
 name: braze-validator
 description: Checks facts against documentation
-model: haiku
+model: inherit
 tools:
   - Read
   - Glob

@@ -52,7 +52,7 @@ description: >-
   segment composition, custom event patterns, and user attribute distributions.,
   Analyzes revenue trends, purchase frequency, and product performance from
   transaction data.
-model: opus
+model: inherit
 tools:
   - Read
   - Glob

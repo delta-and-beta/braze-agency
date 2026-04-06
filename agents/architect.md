@@ -59,7 +59,7 @@ description: >-
   schemas, selection strategies, and sync/async operation trade-offs., Defines
   cross-cutting API patterns for authentication, provisioning, preference
   management, and content delivery.
-model: opus
+model: inherit
 tools:
   - Read
   - Glob

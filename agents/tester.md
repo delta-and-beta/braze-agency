@@ -33,7 +33,7 @@ description: >-
   tutorials., Tests API endpoint behavior for email, SMS, catalog, CDI, and
   platform operations including error cases., Verifies export data completeness,
   format correctness, and analytics consistency across all export endpoints.
-model: opus
+model: inherit
 tools:
   - Read
   - Glob
