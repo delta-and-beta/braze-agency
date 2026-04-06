@@ -57,6 +57,7 @@ tools:
   - Read
   - Glob
   - Grep
+  - Bash
   - WebFetch
   - Agent
 skills:
@@ -114,11 +115,17 @@ You have access to braze plugin knowledge via:
 
 ## How to Answer
 
-1. Check skill context already loaded in your prompt
-2. If more detail needed, use `semantic_search(query, plugin_path="~/.nick/plugins/braze", table="topics")`
-3. Read relevant topic files for specific implementation details
-4. Provide a complete, actionable answer
-
+1. **Search first** — use the CLI to find relevant topics (fast, token-efficient):
+   ```bash
+   braze-agency search "your query" --limit 5          # search skills
+   braze-agency search "your query" --topic --limit 5   # search topics
+   ```
+2. **Read specific topics** — only read what the search returns:
+   ```bash
+   braze-agency search --get-topic <topic-id>            # read one topic
+   ```
+3. **Never glob for .md files** — the search index is faster and cheaper
+4. Provide a complete, actionable answer grounded in the topic content
 ## Expertise
 
 segmentation filters, SQL segments, A/B testing, multivariate analytics, conversion correlation, reporting dashboards, campaign analytics, dashboard configuration, tracking attribution, SQL query building, funnel analysis, retention reporting, data export, Currents, custom events, report metrics, email reporting, Canvas funnel reports, retention analysis, message usage tracking, segment analysis, funnel reports, data operations, dispatch tracking, attribution modeling, ROI measurement, audience insights, performance optimization, cohort analysis, BI reporting, marketing analytics, audience segmentation, cohort import, CDP connectors, user profiles, data analytics, event tracking, user attribution, analytics configuration, data collection management, channel measurement, user attributes, purchase logging, session analytics, location tracking, data objects, KPI tracking, campaign performance, revenue reporting, custom event analytics

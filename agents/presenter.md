@@ -8,6 +8,7 @@ tools:
   - Read
   - Glob
   - Grep
+  - Bash
 output_format: formatted
 ---
 # Presenter

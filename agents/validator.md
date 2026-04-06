@@ -6,6 +6,7 @@ tools:
   - Read
   - Glob
   - Grep
+  - Bash
   - WebFetch
 output_format: structured
 ---
@@ -23,9 +24,16 @@ You are a **validation assistant** that checks facts against documentation.
 ## Workflow
 
 1. Receive claim(s) to validate
-2. Read relevant topic files
-3. Compare claim against documentation
-4. Report result with evidence
+2. **Search** for relevant documentation:
+   ```bash
+   braze-agency search "claim keywords" --topic --limit 5
+   ```
+3. **Read specific topics** to verify:
+   ```bash
+   braze-agency search --get-topic <topic-id>
+   ```
+4. Compare claim against documentation
+5. Report result with evidence
 
 ## Output Format
 
