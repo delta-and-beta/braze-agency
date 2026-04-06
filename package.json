@@ -1,0 +1,38 @@
+{
+  "name": "@anthropic-apps/braze-agency",
+  "version": "1.0.0",
+  "description": "Braze platform specialist agency — 9 AI agents backed by 166 skills and 1,304 topic references with semantic search",
+  "type": "module",
+  "bin": {
+    "braze-agency": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "install-agents": "node bin/cli.mjs install",
+    "uninstall-agents": "node bin/cli.mjs uninstall",
+    "mcp": "node bin/mcp.mjs"
+  },
+  "files": [
+    "agents/",
+    "skills/",
+    "memory.db",
+    "keywords.txt",
+    "skill_index.json",
+    "skill_meta.json",
+    "bin/",
+    "README.md"
+  ],
+  "keywords": [
+    "braze",
+    "claude-code",
+    "ai-agents",
+    "martech",
+    "customer-engagement"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "sqlite-vec": "^0.1.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@xenova/transformers": "^2.17.0"
+  }
+}

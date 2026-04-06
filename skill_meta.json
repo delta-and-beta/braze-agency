@@ -1,0 +1,2784 @@
+{
+  "skills": {
+    "engineer-push": {
+      "role": "braze-engineer",
+      "summary": "Implementation of push notifications across iOS, Android, and web platforms including registration, advanced options, and platform-specific configuration.",
+      "topics": [
+        "message-building-by-channel-push-ios",
+        "message-building-by-channel-push-android",
+        "message-building-by-channel-push-web",
+        "message-building-by-channel-push-creating-a-push-message",
+        "message-building-by-channel-push-push-registration",
+        "message-building-by-channel-push-advanced-push-options",
+        "message-building-by-channel-push-types",
+        "message-building-by-channel-push-users-and-subscriptions",
+        "message-building-by-channel-push-ios-utilizing-badge-count",
+        "message-building-by-channel-push-best-practices",
+        "message-building-by-channel-push-faq",
+        "message-building-by-channel-push-testing",
+        "message-building-by-channel-push-troubleshooting",
+        "message-building-by-channel-push-push-error-codes",
+        "message-building-by-channel-push-push-reporting"
+      ]
+    },
+    "engineer-connected-content": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of Connected Content API calls including variable handling, retry logic, and external data integration.",
+      "topics": [
+        "personalization-and-dynamic-content-connected-content",
+        "personalization-and-dynamic-content-connected-content-making-an-api-call",
+        "personalization-and-dynamic-content-connected-content-local-connected-content-variables",
+        "personalization-and-dynamic-content-connected-content-connected-content-retries",
+        "personalization-and-dynamic-content-connected-content-public-apis",
+        "personalization-and-dynamic-content-connected-content-user-profile-fields-connected-content"
+      ]
+    },
+    "engineer-webhooks": {
+      "role": "braze-engineer",
+      "summary": "Webhook creation, templating, and integration patterns including Braze-to-Braze webhooks and lead scoring hooks.",
+      "topics": [
+        "message-building-by-channel-webhooks-creating-a-webhook",
+        "message-building-by-channel-webhooks-webhook-template",
+        "message-building-by-channel-webhooks-braze-to-braze-webhooks",
+        "message-building-by-channel-webhooks-lead-scoring",
+        "message-building-by-channel-webhooks-testing",
+        "message-building-by-channel-webhooks-reporting"
+      ]
+    },
+    "engineer-messaging-channels": {
+      "role": "braze-engineer",
+      "summary": "Setup and implementation of LINE, KakaoTalk, and other regional messaging channels including user management and click tracking.",
+      "topics": [
+        "message-building-by-channel-line-line-setup",
+        "message-building-by-channel-line-create",
+        "message-building-by-channel-line-messaging-users",
+        "message-building-by-channel-line-line-users",
+        "message-building-by-channel-line-line-users-user-management",
+        "message-building-by-channel-line-line-users-subscription-groups",
+        "message-building-by-channel-line-create-message-types",
+        "message-building-by-channel-line-create-line-click-tracking",
+        "message-building-by-channel-line-testing",
+        "message-building-by-channel-line-reporting",
+        "message-building-by-channel-kakaotalk-kakaotalk-setup",
+        "message-building-by-channel-kakaotalk-create-kakaotalk-message",
+        "message-building-by-channel-kakaotalk-kakaotalk-click-tracking",
+        "message-building-by-channel-kakaotalk-kakaotalk-reporting"
+      ]
+    },
+    "architect-platform-setup": {
+      "role": "braze-architect",
+      "summary": "Workspace configuration, SDK integration overview, and initial platform onboarding including Braze Pilot program guidance.",
+      "topics": [
+        "get-started-workspaces",
+        "get-started-sdk-overview",
+        "get-started-integrations",
+        "get-started-terms-to-know",
+        "get-started-campaigns-and-canvases",
+        "get-started-braze-pilot",
+        "get-started-braze-pilot-getting-started",
+        "get-started-braze-pilot-deep-links",
+        "get-started-braze-pilot-data-dictionary",
+        "get-started-users-and-segments",
+        "onboarding-faq",
+        "home",
+        "administrative",
+        "privacy-portal"
+      ]
+    },
+    "architect-data-model": {
+      "role": "braze-architect",
+      "summary": "B2B data model design, Salesforce integration patterns, lead scoring architecture, and user profile data structure.",
+      "topics": [
+        "get-started-b2b-use-cases",
+        "get-started-b2b-use-cases-b2b-data-models",
+        "get-started-b2b-use-cases-b2b-salesforce-sales-cloud",
+        "get-started-b2b-use-cases-lead-scoring",
+        "get-started-b2b-use-cases-account-based-segmentation",
+        "data",
+        "engagement-tools-segments-user-profiles",
+        "engagement-tools-segments-user-profiles-duplicate-users"
+      ]
+    },
+    "architect-channel-architecture": {
+      "role": "braze-architect",
+      "summary": "System-level design of the multi-channel messaging topology including channel selection, orchestration, and platform capabilities.",
+      "topics": [
+        "message-building-by-channel",
+        "message-building-by-channel-push",
+        "message-building-by-channel-email",
+        "message-building-by-channel-sms-mms-rcs",
+        "message-building-by-channel-in-app-messages",
+        "message-building-by-channel-whatsapp",
+        "message-building-by-channel-content-cards",
+        "message-building-by-channel-webhooks",
+        "message-building-by-channel-line",
+        "message-building-by-channel-kakaotalk",
+        "message-building-by-channel-banners",
+        "engagement-tools",
+        "engagement-tools-messaging-fundamentals-delivery-types",
+        "engagement-tools-messaging-fundamentals-copying-across-workspaces",
+        "brazeai"
+      ]
+    },
+    "analyst-segments": {
+      "role": "braze-analyst",
+      "summary": "Audience segmentation creation, filter configuration, SQL and CDI segments, suppression lists, and segment performance analysis.",
+      "topics": [
+        "engagement-tools-segments-creating-a-segment",
+        "engagement-tools-segments-segmentation-filters",
+        "engagement-tools-segments-segment-extension",
+        "engagement-tools-segments-segment-extension-sql-segments",
+        "engagement-tools-segments-segment-extension-cdi-segments",
+        "engagement-tools-segments-managing-segments",
+        "engagement-tools-segments-measuring-segment-size",
+        "engagement-tools-segments-viewing-and-understanding-segment-data",
+        "engagement-tools-segments-segment-insights",
+        "engagement-tools-segments-suppression-lists",
+        "engagement-tools-segments-location-targeting",
+        "engagement-tools-segments-regex",
+        "engagement-tools-segments-troubleshooting",
+        "engagement-tools-segments-user-profiles",
+        "engagement-tools-segments-user-profiles-duplicate-users",
+        "engagement-tools-messaging-fundamentals-targeting-users",
+        "get-started-users-and-segments"
+      ]
+    },
+    "analyst-reporting": {
+      "role": "braze-analyst",
+      "summary": "Performance measurement across push, webhooks, content cards, LINE, KakaoTalk, banners, and landing pages.",
+      "topics": [
+        "analytics",
+        "message-building-by-channel-push-push-reporting",
+        "message-building-by-channel-webhooks-reporting",
+        "message-building-by-channel-content-cards-reporting",
+        "message-building-by-channel-line-reporting",
+        "message-building-by-channel-kakaotalk-kakaotalk-reporting",
+        "message-building-by-channel-banners-analytics",
+        "engagement-tools-landing-pages-tracking-users",
+        "engagement-tools-landing-pages-about-tracking-data",
+        "engagement-tools-messaging-fundamentals-conversion-events",
+        "analytics-reporting",
+        "reporting-revenue-report",
+        "reporting-retention-reports",
+        "reporting-report-metrics",
+        "reporting-report-builder",
+        "reporting-report-builder-legacy",
+        "reporting-global-control-group-reporting",
+        "reporting-funnel-reports",
+        "reporting-engagement-reports",
+        "reporting-data-by-segments",
+        "reporting-configuring-reporting",
+        "reporting-canvas-analytics",
+        "reporting-campaign-analytics",
+        "reporting-dashboard-builder"
+      ]
+    },
+    "analyst-testing": {
+      "role": "braze-analyst",
+      "summary": "A/B and multivariate testing design, statistical projection, optimization strategies, and global control group management.",
+      "topics": [
+        "engagement-tools-testing-multivariant-testing",
+        "engagement-tools-testing-multivariant-testing-create-multivariate-campaign",
+        "engagement-tools-testing-multivariant-testing-multivariate-analytics",
+        "engagement-tools-testing-multivariant-testing-ab-test-projection",
+        "engagement-tools-testing-multivariant-testing-optimizations",
+        "engagement-tools-testing-multivariant-testing-faq",
+        "engagement-tools-testing-global-control-group",
+        "engagement-tools-testing-conversion-correlation",
+        "engagement-tools-testing-random-bucket-numbers",
+        "engagement-tools-testing-race-conditions",
+        "engagement-tools-messaging-fundamentals-conversion-events"
+      ]
+    },
+    "strategist-personalization": {
+      "role": "braze-strategist",
+      "summary": "Liquid templating strategy, promotion code management, Connected Content usage patterns, deep linking, and Canvas entry properties.",
+      "topics": [
+        "personalization-and-dynamic-content-overview",
+        "personalization-and-dynamic-content-liquid",
+        "personalization-and-dynamic-content-key-value-pairs",
+        "personalization-and-dynamic-content-deep-linking-to-in-app-content",
+        "personalization-and-dynamic-content-canvas-persistent-entry-properties",
+        "personalization-and-dynamic-content-promotion-codes",
+        "personalization-and-dynamic-content-promotion-codes-create",
+        "personalization-and-dynamic-content-promotion-codes-manage",
+        "personalization-and-dynamic-content-promotion-codes-migrating-from-data-feeds",
+        "personalization-and-dynamic-content-connected-content",
+        "personalization-and-dynamic-content-connected-content-making-an-api-call",
+        "personalization-and-dynamic-content",
+        "personalization-and-dynamic-content-connected-content-user-profile-fields-connected-content",
+        "partners-message-personalization",
+        "partners-referrals-extole",
+        "partners-referrals-friendbuy",
+        "partners-referrals-mention-me",
+        "partners-referrals-viralsweep",
+        "message-personalization-location",
+        "message-personalization-localization",
+        "message-personalization-dynamic-content",
+        "message-personalization-referrals",
+        "message-personalization-creative-studio",
+        "location-radar",
+        "location-foursquare",
+        "location-accuweather",
+        "localization-smartling",
+        "localization-phrase"
+      ]
+    },
+    "strategist-messaging": {
+      "role": "braze-strategist",
+      "summary": "Campaign and Canvas design fundamentals including delivery types, reeligibility, localization, approvals, and accessibility best practices.",
+      "topics": [
+        "engagement-tools-messaging-fundamentals-delivery-types",
+        "engagement-tools-messaging-fundamentals-targeting-users",
+        "engagement-tools-messaging-fundamentals-reeligibility",
+        "engagement-tools-messaging-fundamentals-localization",
+        "engagement-tools-messaging-fundamentals-localization-right-to-left-messages",
+        "engagement-tools-messaging-fundamentals-know-before-send",
+        "engagement-tools-messaging-fundamentals-approvals",
+        "engagement-tools-messaging-fundamentals-accessibility",
+        "engagement-tools-messaging-fundamentals-about-statuses",
+        "engagement-tools-messaging-fundamentals-conversion-events",
+        "engagement-tools-messaging-fundamentals-archiving",
+        "engagement-tools-messaging-fundamentals-duplicating",
+        "engagement-tools-messaging-fundamentals-product-blocks",
+        "engagement-tools-messaging-fundamentals-drag-and-drop-editor-blocks",
+        "get-started-campaigns-and-canvases",
+        "message-building-by-channel-push-best-practices",
+        "message-building-by-channel-content-cards-best-practices",
+        "message-building-by-channel-content-cards-best-practices-know-before-send",
+        "email-post-remove-spam",
+        "email-post-remove-hard-bounces",
+        "email-post-email-subscription-status",
+        "email-get-query-unsubscribed-email-addresses",
+        "email-get-list-hard-bounces",
+        "sms-post-remove-invalid-numbers",
+        "endpoints-email",
+        "endpoints-sms",
+        "endpoints-preference-center"
+      ]
+    },
+    "strategist-content": {
+      "role": "braze-strategist",
+      "summary": "Content cards, banners, templates, media library, landing pages, and Canvas template design for rich in-app and web experiences.",
+      "topics": [
+        "message-building-by-channel-content-cards-create",
+        "message-building-by-channel-content-cards-create-card-creation",
+        "message-building-by-channel-content-cards-creative-details",
+        "message-building-by-channel-content-cards-best-practices-improving-low-latency-requirements",
+        "message-building-by-channel-content-cards-testing",
+        "message-building-by-channel-content-cards-reporting",
+        "message-building-by-channel-banners-create",
+        "message-building-by-channel-banners-custom-code",
+        "message-building-by-channel-banners-faq",
+        "message-building-by-channel-banners-testing",
+        "message-building-by-channel-banners-analytics",
+        "engagement-tools-templates-and-media-media-library",
+        "engagement-tools-templates-and-media-managing-templates",
+        "engagement-tools-templates-and-media-image-specs",
+        "engagement-tools-templates-and-media-content-blocks",
+        "engagement-tools-templates-and-media-canvas-templates",
+        "engagement-tools-templates-and-media-faqs",
+        "engagement-tools-landing-pages-creating-pages",
+        "engagement-tools-landing-pages-personalizing-pages",
+        "engagement-tools-landing-pages-customizing-urls",
+        "engagement-tools-landing-pages-retargeting",
+        "engagement-tools-landing-pages-tracking-users",
+        "engagement-tools-landing-pages-about-tracking-data",
+        "message-orchestration-templates",
+        "message-orchestration-cms-dam",
+        "message-orchestration-ab-testing",
+        "message-personalization-creative-studio-figma",
+        "message-personalization-creative-studio-canva",
+        "templates-jasper",
+        "templates-knak",
+        "templates-stensul"
+      ]
+    },
+    "tester-channel-qa": {
+      "role": "braze-tester",
+      "summary": "Systematic testing procedures for push, content cards, banners, LINE, and webhook channels including pre-send validation checklists.",
+      "topics": [
+        "message-building-by-channel-push-testing",
+        "message-building-by-channel-content-cards-testing",
+        "message-building-by-channel-banners-testing",
+        "message-building-by-channel-line-testing",
+        "message-building-by-channel-webhooks-testing",
+        "engagement-tools-messaging-fundamentals-know-before-send",
+        "message-building-by-channel-content-cards-best-practices-know-before-send",
+        "engagement-tools-testing-race-conditions",
+        "message-building-by-channel-push-faq",
+        "message-building-by-channel-banners-faq"
+      ]
+    },
+    "tester-troubleshooting": {
+      "role": "braze-tester",
+      "summary": "Systematic diagnosis of push delivery failures, segment calculation issues, and channel-specific error codes with resolution workflows.",
+      "topics": [
+        "message-building-by-channel-push-troubleshooting",
+        "message-building-by-channel-push-push-error-codes",
+        "engagement-tools-segments-troubleshooting",
+        "engagement-tools-testing-race-conditions",
+        "message-building-by-channel-push-faq",
+        "message-building-by-channel-banners-faq",
+        "engagement-tools-templates-and-media-faqs",
+        "ios-in-app-messaging-troubleshooting",
+        "api-errors",
+        "api-network-connectivity-issues"
+      ]
+    },
+    "engineer-feature-flags": {
+      "role": "braze-engineer",
+      "summary": "Creating, configuring, and managing feature flags including canvas integration and troubleshooting.",
+      "topics": [
+        "engagement-tools-feature-flags",
+        "feature-flags-create",
+        "feature-flags-canvas",
+        "feature-flags-faq",
+        "feature-flags-experiments"
+      ]
+    },
+    "engineer-mcp-server": {
+      "role": "braze-engineer",
+      "summary": "Setting up and using the Braze MCP server for programmatic API access.",
+      "topics": [
+        "mcp-server-setup",
+        "mcp-server-usage",
+        "mcp-server-available-api-functions"
+      ]
+    },
+    "engineer-agents": {
+      "role": "braze-engineer",
+      "summary": "Creating, deploying, and referencing Braze AI agents.",
+      "topics": [
+        "agents-creating-agents",
+        "agents-deploying-agents",
+        "agents-reference"
+      ]
+    },
+    "engineer-locations": {
+      "role": "braze-engineer",
+      "summary": "Implementing location tracking and geofence configuration for location-based engagement.",
+      "topics": [
+        "engagement-tools-locations-and-geofences",
+        "locations-and-geofences-location-tracking",
+        "locations-and-geofences-creating-geofences"
+      ]
+    },
+    "architect-decisioning": {
+      "role": "braze-architect",
+      "summary": "Designing and orchestrating decisioning studio agents, audiences, and launch workflows.",
+      "topics": [
+        "decisioning-studio-get-started",
+        "decisioning-studio-design-agents",
+        "decisioning-studio-orchestration-setup",
+        "decisioning-studio-launch-agents",
+        "decisioning-studio-audience",
+        "decisioning-studio-faq",
+        "decisioning-studio-decisioning-studio-go"
+      ]
+    },
+    "architect-data-pipelines": {
+      "role": "braze-architect",
+      "summary": "Designing data preparation workflows including data streams and governance principles.",
+      "topics": [
+        "decisioning-studio-prepare-data",
+        "decisioning-prepare-data-data-streams",
+        "decisioning-prepare-data-data-principles",
+        "reverse-etl-rudderstack",
+        "reverse-etl-mozart-data",
+        "reverse-etl-hightouch",
+        "reverse-etl-census",
+        "reverse-etl-hightouch-personalization-api",
+        "reverse-etl-hightouch-cohort-import",
+        "reverse-etl-hightouch-overview",
+        "reverse-etl-census-cohort-import",
+        "data-and-analytics-reverse-etl",
+        "workflow-automation-fivetran",
+        "workflow-automation-airbyte",
+        "workflow-automation-zapier"
+      ]
+    },
+    "architect-messaging": {
+      "role": "braze-architect",
+      "summary": "Designing messaging fundamentals and template/media management architecture.",
+      "topics": [
+        "engagement-tools-messaging-fundamentals",
+        "engagement-tools-templates-and-media",
+        "developer-guide-in-app-messages",
+        "in-app-messages-triggering-messages",
+        "in-app-messages-deep-linking",
+        "in-app-messages-html-messages",
+        "content-cards-creating-cards",
+        "content-cards-deep-linking",
+        "content-cards-content-card-inbox",
+        "banners-placements",
+        "banners-migrating-from-content-cards"
+      ]
+    },
+    "architect-operator": {
+      "role": "braze-architect",
+      "summary": "Managing the Braze Operator for support ticket automation, action review, and troubleshooting.",
+      "topics": [
+        "operator-troubleshooting",
+        "operator-support-tickets",
+        "operator-reviewing-actions"
+      ]
+    },
+    "analyst-dashboards": {
+      "role": "braze-analyst",
+      "summary": "Configuring and interpreting performance dashboards for email, e-commerce, deliverability, and API usage.",
+      "topics": [
+        "analytics-dashboard",
+        "dashboard-home-dashboard",
+        "dashboard-email-performance-dashboard",
+        "dashboard-ecommerce-revenue-dashboard",
+        "dashboard-diagnostics-dashboard",
+        "dashboard-deliverability-center",
+        "dashboard-conversions-dashboard",
+        "dashboard-api-usage-dashboard",
+        "dashboard-api-usage-alerts"
+      ]
+    },
+    "analyst-tracking": {
+      "role": "braze-analyst",
+      "summary": "Configuring and analyzing user tracking for email, installs, segments, and influenced opens.",
+      "topics": [
+        "analytics-tracking",
+        "tracking-uninstall-tracking",
+        "tracking-segment-analytics-tracking",
+        "tracking-influenced-opens",
+        "tracking-email-tracking",
+        "locations-and-geofences-location-tracking"
+      ]
+    },
+    "analyst-queries": {
+      "role": "braze-analyst",
+      "summary": "Building SQL queries with variables, templates, and AI-assisted generation for data exploration.",
+      "topics": [
+        "analytics-query-builder",
+        "query-builder-sql-variables",
+        "query-builder-query-templates",
+        "query-builder-building-queries",
+        "generative-ai-sql-queries",
+        "generative-ai-sql-segment-extensions"
+      ]
+    },
+    "analyst-decisioning-analytics": {
+      "role": "braze-analyst",
+      "summary": "Analyzing decisioning studio performance through timeline, diagnostics, and insight reports.",
+      "topics": [
+        "decisioning-studio-reporting",
+        "decisioning-reporting-timeline",
+        "decisioning-reporting-performance",
+        "decisioning-reporting-insights",
+        "decisioning-reporting-diagnostics"
+      ]
+    },
+    "strategist-campaigns": {
+      "role": "braze-strategist",
+      "summary": "Designing multi-channel campaign strategies with audience segmentation, canvases, and landing pages.",
+      "topics": [
+        "engagement-tools-campaigns",
+        "engagement-tools-canvas",
+        "engagement-tools-segments",
+        "engagement-tools-landing-pages",
+        "engagement-tools-templates-and-media",
+        "engagement-tools-locations-and-geofences",
+        "reporting-campaign-analytics",
+        "reporting-canvas-analytics",
+        "api-api-campaigns",
+        "api-api-campaigns-transactional",
+        "api-use-cases",
+        "ios-in-app-messaging-delivery",
+        "ios-content-cards-use-cases",
+        "api-objects-connected-audience",
+        "endpoints-messaging-post-send-triggered-campaigns",
+        "endpoints-messaging-post-send-transactional"
+      ]
+    },
+    "strategist-ai-optimization": {
+      "role": "braze-strategist",
+      "summary": "Leveraging intelligence suite and generative AI for optimal send timing, channel selection, and content creation.",
+      "topics": [
+        "intelligence-suite-tutorial",
+        "intelligence-suite-intelligent-timing",
+        "intelligence-suite-intelligent-selection",
+        "intelligence-suite-intelligent-channel",
+        "generative-ai-copywriting",
+        "generative-ai-images",
+        "generative-ai-liquid",
+        "generative-ai-brand-guidelines",
+        "generative-ai-content-qa"
+      ]
+    },
+    "strategist-predictions": {
+      "role": "braze-strategist",
+      "summary": "Building and applying predictive models for churn prevention and event likelihood targeting.",
+      "topics": [
+        "predictive-suite-predictive-churn",
+        "predictive-churn-creating-a-churn-prediction",
+        "predictive-churn-messaging-users",
+        "predictive-churn-use-case",
+        "predictive-churn-analytics",
+        "predictive-churn-troubleshooting",
+        "predictive-suite-predictive-events",
+        "predictive-events-creating-an-event-prediction",
+        "predictive-events-messaging-users",
+        "predictive-events-use-case",
+        "predictive-events-analytics"
+      ]
+    },
+    "strategist-recommendations": {
+      "role": "braze-strategist",
+      "summary": "Creating and deploying personalized item recommendations using rules-based and AI-driven approaches.",
+      "topics": [
+        "item-recommendations-creating-recommendations",
+        "item-recommendations-using-recommendations",
+        "item-recommendations-viewing-analytics",
+        "item-recommendations-use-case",
+        "item-recommendations-rules-based",
+        "item-recommendations-ai",
+        "personalized-recommendations-personalize",
+        "personalized-recommendations-movable-ink",
+        "personalized-recommendations-fullstory",
+        "personalized-recommendations-dynamic-yield",
+        "personalized-recommendations-certona",
+        "personalized-recommendations-amplitude",
+        "personalized-recommendations-amazon-personalize",
+        "personalized-recommendations-amazon-personalize-workshop",
+        "personalized-recommendations-amazon-personalize-amazon-personalize",
+        "personalization-engines-dynamic-yield",
+        "rest-api-recommending-products"
+      ]
+    },
+    "tester-experiments": {
+      "role": "braze-tester",
+      "summary": "Designing and running experiments including feature flag experiments and engagement testing workflows.",
+      "topics": [
+        "engagement-tools-testing",
+        "feature-flags-experiments"
+      ]
+    },
+    "tester-quality": {
+      "role": "braze-tester",
+      "summary": "Validating content quality using AI-assisted QA and brand guideline compliance.",
+      "topics": [
+        "generative-ai-content-qa",
+        "generative-ai-brand-guidelines"
+      ]
+    },
+    "engineer-user-data": {
+      "role": "braze-engineer",
+      "summary": "Implements SDK data collection, user profile lifecycle management, and user import/export workflows.",
+      "topics": [
+        "data-unification-user_data",
+        "data-unification-user_data-user_profile_lifecycle",
+        "data-unification-user_data-sdk_data_collection",
+        "data-unification-user_data-language_codes",
+        "data-unification-user_data-import_users",
+        "data-unification-user_data-delete_users",
+        "data-unification-user_data-collection_use_case",
+        "data-unification-user_data-best_practices",
+        "data-unification-creating_a_formula",
+        "data-activation-custom_data-custom_attributes",
+        "data-activation-custom_data-custom_events"
+      ]
+    },
+    "engineer-cloud-ingestion": {
+      "role": "braze-engineer",
+      "summary": "Configures cloud data ingestion connectors, sync pipelines, and data transformation workflows.",
+      "topics": [
+        "data-unification-cloud_ingestion",
+        "data-unification-cloud_ingestion-zero_copy_sync",
+        "data-unification-cloud_ingestion-sync_logs",
+        "data-unification-data_transformation",
+        "data-unification-data_transformation-creating_a_transformation",
+        "data-unification-data_transformation-use_cases",
+        "data-technology_partners"
+      ]
+    },
+    "engineer-whatsapp-setup": {
+      "role": "braze-engineer",
+      "summary": "Implements WhatsApp Business API integration, phone number provisioning, and connector configuration.",
+      "topics": [
+        "whatsapp-overview",
+        "whatsapp-overview-embedded_signup",
+        "whatsapp-overview-phone_number_acquisition",
+        "whatsapp-overview-phone_number_migration",
+        "whatsapp-overview-byo_connector",
+        "whatsapp-overview-transfer_between_workspaces",
+        "whatsapp-overview-multiple_subscription_groups",
+        "whatsapp-user_phone_numbers",
+        "whatsapp-user_subscription",
+        "whatsapp-meta_resources",
+        "whatsapp-message_processing-handling_unknown_numbers"
+      ]
+    },
+    "engineer-iam-builder": {
+      "role": "braze-engineer",
+      "summary": "Implements in-app messages using drag-and-drop editor, custom HTML, and creative detail configurations.",
+      "topics": [
+        "in-app_messages-drag_and_drop-create",
+        "in-app_messages-drag_and_drop-editor_blocks",
+        "in-app_messages-drag_and_drop-style_settings",
+        "in-app_messages-creative_details-slideup",
+        "in-app_messages-creative_details-modal",
+        "in-app_messages-creative_details-fullscreen"
+      ]
+    },
+    "architect-data-platform": {
+      "role": "braze-architect",
+      "summary": "Designs the overall Braze data platform topology including unification, activation, and distribution layers.",
+      "topics": [
+        "data-braze_data_platform",
+        "data-unification",
+        "data-distribution",
+        "data-activation",
+        "data-unification-user_data",
+        "data-unification-data_transformation",
+        "data-unification-cloud_ingestion",
+        "data-technology_partners"
+      ]
+    },
+    "architect-data-infrastructure": {
+      "role": "braze-architect",
+      "summary": "Manages data center selection, field-level encryption, and data point consumption architecture.",
+      "topics": [
+        "data-infrastructure",
+        "data-infrastructure-data_centers",
+        "data-infrastructure-data_points",
+        "data-infrastructure-field_level_encryption"
+      ]
+    },
+    "architect-admin-config": {
+      "role": "braze-architect",
+      "summary": "Designs workspace structures, manages platform settings, rate limits, and API configurations.",
+      "topics": [
+        "administrative-app_settings",
+        "administrative-app_settings-workspaces",
+        "administrative-app_settings-company_settings",
+        "administrative-app_settings-api_settings_tab",
+        "administrative-app_settings-email_settings",
+        "administrative-app_settings-push_settings",
+        "administrative-app_settings-messaging_rate_limits",
+        "administrative-app_settings-multi_language_settings",
+        "administrative-app_settings-tags",
+        "administrative-app_settings-subscription_and_usage",
+        "administrative-app_settings-manage_your_braze_users",
+        "administrative-app_settings-internal_groups_tab",
+        "administrative-app_settings-brand_guidelines",
+        "administrative-app_settings-exports_log",
+        "administrative-app_settings-event_user_log_tab",
+        "administrative-app_settings-message_activity_log_tab"
+      ]
+    },
+    "architect-access-security": {
+      "role": "braze-architect",
+      "summary": "Configures SSO providers, manages authentication flows, enforces privacy compliance, and controls platform access.",
+      "topics": [
+        "administrative-access_braze",
+        "administrative-access_braze-single_sign_on",
+        "administrative-access_braze-single_sign_on-set_up",
+        "administrative-access_braze-single_sign_on-saml_jit",
+        "administrative-access_braze-single_sign_on-okta",
+        "administrative-access_braze-single_sign_on-onelogin",
+        "administrative-access_braze-single_sign_on-entra",
+        "administrative-access_braze-accessing_your_account",
+        "administrative-access_braze-sdk_endpoints",
+        "administrative-access_braze-braze_dashboard",
+        "administrative-privacy",
+        "administrative-privacy-spam_regulations",
+        "administrative-privacy-managing_consent",
+        "data-infrastructure-field_level_encryption"
+      ]
+    },
+    "analyst-data-export": {
+      "role": "braze-analyst",
+      "summary": "Manages data export workflows including APIs, CSV generation, revenue data, and campaign result extraction.",
+      "topics": [
+        "data-distribution-export_braze_data",
+        "data-distribution-export_braze_data-export_apis",
+        "data-distribution-export_braze_data-segment_data_to_csv",
+        "data-distribution-export_braze_data-opening_csv_reports_in_excel",
+        "data-distribution-export_braze_data-exporting_revenue_data",
+        "data-distribution-export_braze_data-exporting_app_usage_data",
+        "data-distribution-export_braze_data-export_custom_event_data",
+        "data-distribution-export_braze_data-export_canvas_data",
+        "data-distribution-export_braze_data-export_campaign_results_data",
+        "data-distribution-export_braze_data-message_archiving",
+        "data-distribution-export_braze_data-faqs",
+        "data-distribution-export_braze_data-export_troubleshooting"
+      ]
+    },
+    "analyst-currents-streaming": {
+      "role": "braze-analyst",
+      "summary": "Configures Braze Currents for real-time event streaming to data warehouses and analytics platforms.",
+      "topics": [
+        "data-distribution-braze_currents",
+        "data-distribution-braze_currents-setting_up_currents",
+        "data-distribution-braze_currents-transferring_data_to_redshift"
+      ]
+    },
+    "analyst-activation-data": {
+      "role": "braze-analyst",
+      "summary": "Manages custom event schemas, attribute definitions, naming conventions, and report metric interpretation.",
+      "topics": [
+        "data-activation-report_metrics",
+        "data-activation-custom_data",
+        "data-activation-custom_data-events",
+        "data-activation-custom_data-custom_events",
+        "data-activation-custom_data-custom_attributes",
+        "data-activation-custom_data-purchase_events",
+        "data-activation-custom_data-recommended_events",
+        "data-activation-custom_data-event_naming_conventions",
+        "data-activation-custom_data-managing_custom_data"
+      ]
+    },
+    "analyst-campaign-analytics": {
+      "role": "braze-analyst",
+      "summary": "Analyzes WhatsApp campaign metrics, message usage patterns, and channel-specific performance data.",
+      "topics": [
+        "whatsapp-whatsapp_campaign_analytics",
+        "whatsapp-whatsapp_campaign_analytics-message_usage",
+        "data-activation-report_metrics",
+        "export-campaigns-get-send-analytics",
+        "export-campaigns-get-campaigns",
+        "export-campaigns-get-campaign-details",
+        "export-campaigns-get-campaign-analytics",
+        "export-canvas-get-canvases",
+        "export-canvas-get-canvas-details",
+        "export-canvas-get-canvas-analytics-summary",
+        "export-canvas-get-canvas-analytics",
+        "export-campaigns",
+        "export-canvas"
+      ]
+    },
+    "strategist-ai-suite": {
+      "role": "braze-strategist",
+      "summary": "Leverages BrazeAI capabilities including predictive analytics, generative AI, content optimization, and intelligent decisioning.",
+      "topics": [
+        "brazeai-predictive_suite",
+        "brazeai-intelligence_suite",
+        "brazeai-generative_ai",
+        "brazeai-content_optimizer",
+        "brazeai-decisioning_studio",
+        "brazeai-item_recommendations",
+        "brazeai-agents",
+        "brazeai-operator",
+        "brazeai-mcp_server"
+      ]
+    },
+    "strategist-whatsapp-campaigns": {
+      "role": "braze-strategist",
+      "summary": "Designs WhatsApp campaign flows, templates, retargeting strategies, and delivery optimization.",
+      "topics": [
+        "whatsapp-whatsapp_campaign",
+        "whatsapp-whatsapp_campaign-create",
+        "whatsapp-whatsapp_campaign-template_builder",
+        "whatsapp-whatsapp_campaign-template_builder-whatsapp_carousel_templates",
+        "whatsapp-whatsapp_campaign-whatsapp_flows",
+        "whatsapp-whatsapp_campaign-user_retargeting",
+        "whatsapp-whatsapp_campaign-product_messages",
+        "whatsapp-whatsapp_campaign-optimized_delivery",
+        "whatsapp-whatsapp_campaign-custom_domains",
+        "whatsapp-whatsapp_campaign-click_tracking",
+        "whatsapp-whatsapp_best_practices",
+        "whatsapp-whatsapp_use_cases",
+        "whatsapp-whatsapp_use_cases-external_system",
+        "whatsapp-whatsapp_use_cases-ads_that_click",
+        "whatsapp-message_processing-opt-ins_and_opt-outs"
+      ]
+    },
+    "strategist-iam-campaigns": {
+      "role": "braze-strategist",
+      "summary": "Designs in-app message campaign strategies using templates, onboarding flows, and promotional patterns.",
+      "topics": [
+        "in-app_messages-drag_and_drop-templates",
+        "in-app_messages-drag_and_drop-templates-seasonal_promo",
+        "in-app_messages-drag_and_drop-templates-product_announcement",
+        "in-app_messages-drag_and_drop-templates-onboarding",
+        "in-app_messages-drag_and_drop-templates-email_capture",
+        "in-app_messages-drag_and_drop-templates-email_confirmation_page",
+        "in-app_messages-drag_and_drop-templates-email_discount",
+        "in-app_messages-drag_and_drop-templates-email_image",
+        "in-app_messages-drag_and_drop-templates-email_offer",
+        "in-app_messages-drag_and_drop-templates-phone_number_capture",
+        "in-app_messages-drag_and_drop-create"
+      ]
+    },
+    "strategist-catalog-strategy": {
+      "role": "braze-strategist",
+      "summary": "Designs catalog-based personalization using selections, triggers, and product blocks for dynamic content.",
+      "topics": [
+        "data-activation-catalogs",
+        "data-activation-catalogs-create",
+        "data-activation-catalogs-use",
+        "data-activation-catalogs-selections",
+        "data-activation-catalogs-catalog_triggers",
+        "data-activation-catalogs-product_blocks"
+      ]
+    },
+    "tester-whatsapp-qa": {
+      "role": "braze-tester",
+      "summary": "Tests WhatsApp message delivery, validates quality ratings, and verifies opt-in/opt-out processing.",
+      "topics": [
+        "whatsapp-testing",
+        "whatsapp-message_processing",
+        "whatsapp-message_processing-user_messages",
+        "whatsapp-message_processing-quality_rating",
+        "whatsapp-message_processing-opt-ins_and_opt-outs",
+        "whatsapp-message_processing-handling_unknown_numbers",
+        "whatsapp-faqs",
+        "whatsapp-whatsapp_best_practices"
+      ]
+    },
+    "tester-platform-validation": {
+      "role": "braze-tester",
+      "summary": "Diagnoses platform access issues, validates message activity logs, and resolves export and delivery problems.",
+      "topics": [
+        "administrative-access_braze-troubleshooting",
+        "administrative-access_braze-support",
+        "administrative-access_braze-portal",
+        "administrative-access_braze-language",
+        "administrative-app_settings-message_activity_log_tab",
+        "administrative-app_settings-event_user_log_tab",
+        "data-distribution-export_braze_data-export_troubleshooting",
+        "data-distribution-export_braze_data-faqs"
+      ]
+    },
+    "engineer-email-composition": {
+      "role": "braze-engineer",
+      "summary": "Building email campaigns using HTML editor, drag-and-drop editor, and template systems.",
+      "topics": [
+        "email-templates-link-template",
+        "email-templates-link-aliasing",
+        "email-templates-html-email-template",
+        "email-templates-faq",
+        "email-templates-email-template",
+        "email-html-editor-css-inline",
+        "email-html-editor-creating-an-email-campaign",
+        "email-html-editor-gmail-promotions-tab",
+        "email-drag-and-drop-overview",
+        "email-drag-and-drop-faq",
+        "email-drag-and-drop-dnd-email-style-settings",
+        "email-drag-and-drop-dnd-editor-blocks",
+        "email-drag-and-drop-dnd-content-blocks",
+        "email-universal-links",
+        "email-transactional-message-api-campaign",
+        "email-templates",
+        "email-html-editor",
+        "email-drag-and-drop",
+        "email-custom-email-footer",
+        "email-faq",
+        "email-apple-mail",
+        "email-best-practices-email-styling"
+      ]
+    },
+    "engineer-sms-messaging": {
+      "role": "braze-engineer",
+      "summary": "Creating and configuring SMS, MMS, and RCS messages including content, links, and media.",
+      "topics": [
+        "sms-create",
+        "sms-faqs",
+        "mms-create",
+        "mms-faqs",
+        "mms-contact-card",
+        "sms-mms-rcs-sms",
+        "sms-mms-rcs-mms",
+        "sms-mms-rcs-rcs",
+        "sms-mms-rcs-link-shortening",
+        "sms-mms-rcs-segments"
+      ]
+    },
+    "engineer-in-app-messages": {
+      "role": "braze-engineer",
+      "summary": "Creating and customizing in-app messages using traditional and drag-and-drop editors.",
+      "topics": [
+        "in-app-traditional-create",
+        "in-app-traditional-customize",
+        "in-app-traditional-templates",
+        "in-app-traditional-dark-mode",
+        "in-app-traditional-video",
+        "in-app-traditional-html-in-app-messages",
+        "in-app-traditional-email-capture-form",
+        "in-app-traditional-color-profiles-and-css",
+        "in-app-messages-traditional",
+        "in-app-messages-drag-and-drop",
+        "in-app-messages-creative-details",
+        "in-app-messages-faq",
+        "in-app-messages-ios-app-rating-prompt"
+      ]
+    },
+    "engineer-canvas-flows": {
+      "role": "braze-engineer",
+      "summary": "Building, managing, and maintaining Canvas flows including drafts, versioning, and post-launch changes.",
+      "topics": [
+        "canvas-managing-cloning-canvases",
+        "canvas-managing-change-your-canvas-after-launch",
+        "canvas-managing-canvas-version-history",
+        "canvas-managing-canvas-drafts",
+        "canvas-ideas-launching-canvas-flow"
+      ]
+    },
+    "architect-email-infrastructure": {
+      "role": "braze-architect",
+      "summary": "Email setup including authentication, IP warming, domain configuration, deliverability, and SSL.",
+      "topics": [
+        "email-setup-ssl",
+        "email-setup-setting-up-ips-and-domains",
+        "email-setup-ip-warming",
+        "email-setup-automated-ip-warming",
+        "email-setup-import-your-email-list",
+        "email-setup-email-validation",
+        "email-setup-deliverability-pitfalls-and-spam-traps",
+        "email-setup-authentication",
+        "email-setup-consent-and-address-collection",
+        "email-email-setup",
+        "email-transactional-message-api-campaign"
+      ]
+    },
+    "architect-sms-infrastructure": {
+      "role": "braze-architect",
+      "summary": "SMS infrastructure including phone number management, short/long codes, compliance, geographic permissions, and keyword handling.",
+      "topics": [
+        "sms-sms-setup",
+        "sms-terms",
+        "sms-sms-sending",
+        "mms-short-long-codes",
+        "keywords-keyword-handling",
+        "keywords-unknown-phone-numbers",
+        "sms-mms-rcs-user-phone-numbers",
+        "sms-mms-rcs-short-and-long-codes",
+        "sms-mms-rcs-phone-numbers-capture",
+        "sms-mms-rcs-geographic-permissions",
+        "sms-mms-rcs-laws-and-regulations",
+        "sms-mms-rcs-keywords",
+        "sms-mms-rcs-message-usage"
+      ]
+    },
+    "architect-subscription-management": {
+      "role": "braze-architect",
+      "summary": "Managing subscription groups, opt-in/opt-out flows, user preferences, and consent collection across channels.",
+      "topics": [
+        "keywords-optin-optout",
+        "keywords-fuzzy-opt-out",
+        "keywords-double-opt-in",
+        "sms-mms-rcs-subscription-groups",
+        "email-preference-center",
+        "email-managing-user-subscriptions",
+        "email-setup-consent-and-address-collection"
+      ]
+    },
+    "analyst-email-performance": {
+      "role": "braze-analyst",
+      "summary": "Email reporting, analytics, and performance measurement.",
+      "topics": [
+        "email-reporting-and-analytics"
+      ]
+    },
+    "analyst-canvas-analytics": {
+      "role": "braze-analyst",
+      "summary": "Canvas-specific analytics including funnel reports, retention measurement, and journey performance.",
+      "topics": [
+        "canvas-testing-retention-reports",
+        "canvas-testing-measuring-and-testing-with-canvas-analytics",
+        "canvas-testing-canvas-funnel-reports"
+      ]
+    },
+    "analyst-messaging-metrics": {
+      "role": "braze-analyst",
+      "summary": "Cross-channel messaging metrics including SMS usage, in-app reporting, segments, and retargeting analysis.",
+      "topics": [
+        "in-app-messages-reporting",
+        "sms-mms-rcs-message-usage",
+        "sms-mms-rcs-segments",
+        "sms-mms-rcs-retargeting"
+      ]
+    },
+    "strategist-email-optimization": {
+      "role": "braze-strategist",
+      "summary": "Email campaign strategy including best practices, sunset policies, styling guidelines, and deliverability optimization.",
+      "topics": [
+        "email-best-practices-use-cases",
+        "email-best-practices-sunset-policies",
+        "email-best-practices-know-before-send",
+        "email-best-practices-guidelines-and-tips",
+        "email-best-practices-email-styling",
+        "email-best-practices-email-services",
+        "email-best-practices-duplicate-emails",
+        "email-best-practices",
+        "email-html-editor-gmail-promotions-tab"
+      ]
+    },
+    "strategist-canvas-design": {
+      "role": "braze-strategist",
+      "summary": "Canvas journey design including use cases, entry/exit criteria, launch strategy, and best practices.",
+      "topics": [
+        "canvas-ideas-best-practices",
+        "canvas-ideas-ecommerce-use-cases",
+        "canvas-ideas-booking-use-case",
+        "canvas-ideas-matching-entry-and-exit-criteria",
+        "canvas-ideas-launching-canvas-flow",
+        "canvas-ideas-pre-post-launch-checklist",
+        "sms-mms-rcs-retargeting"
+      ]
+    },
+    "strategist-in-app-engagement": {
+      "role": "braze-strategist",
+      "summary": "In-app message strategy including best practices, creative guidance, surveys, and engagement patterns.",
+      "topics": [
+        "in-app-messages-best-practices",
+        "in-app-messages-prep-guide",
+        "in-app-messages-know-before-send",
+        "in-app-messages-creative-details",
+        "in-app-traditional-simple-survey",
+        "in-app-traditional-email-capture-form",
+        "in-app-messages-ios-app-rating-prompt"
+      ]
+    },
+    "tester-email-qa": {
+      "role": "braze-tester",
+      "summary": "Email quality assurance including send testing, inbox vision preview, and troubleshooting.",
+      "topics": [
+        "email-testing",
+        "email-inbox-vision",
+        "email-html-editor-troubleshooting",
+        "email-best-practices-know-before-send"
+      ]
+    },
+    "tester-messaging-qa": {
+      "role": "braze-tester",
+      "summary": "SMS and in-app message testing and validation before deployment.",
+      "topics": [
+        "sms-mms-rcs-testing",
+        "in-app-messages-testing",
+        "in-app-messages-prep-guide",
+        "in-app-messages-know-before-send"
+      ]
+    },
+    "tester-canvas-qa": {
+      "role": "braze-tester",
+      "summary": "Canvas flow testing including path preview, test sends, and pre/post-launch validation.",
+      "topics": [
+        "canvas-testing-sending-test-canvases",
+        "canvas-testing-preview-user-paths",
+        "canvas-ideas-pre-post-launch-checklist"
+      ]
+    },
+    "engineer-canvas-creation": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of Canvas flows including entry properties, context variables, channel configuration, exit criteria, and rate limiting.",
+      "topics": [
+        "canvas-get-started",
+        "canvas-get-started-the-basics",
+        "canvas-get-started-canvas-outlines",
+        "canvas-create-a-canvas",
+        "canvas-create-a-canvas-rate-limiting",
+        "canvas-create-a-canvas-exit-criteria",
+        "canvas-create-a-canvas-context-variables",
+        "canvas-create-a-canvas-context-and-event-properties",
+        "canvas-create-a-canvas-canvas-persistent-entry-properties",
+        "canvas-create-a-canvas-canvas-comments",
+        "canvas-create-a-canvas-canvas-by-channel",
+        "canvas-create-a-canvas-in-app-messages-in-canvas",
+        "canvas-create-a-canvas-content-cards-in-canvas",
+        "canvas-managing-canvases",
+        "canvas-faqs"
+      ]
+    },
+    "engineer-campaign-building": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of campaigns including delivery types, triggers, scheduling, API-triggered delivery, and rate limiting.",
+      "topics": [
+        "campaigns-getting-started",
+        "campaigns-getting-started-campaign-basics",
+        "campaigns-building-campaigns",
+        "campaigns-building-creating-campaign",
+        "campaigns-building-delivery-types",
+        "campaigns-building-triggered-delivery",
+        "campaigns-building-scheduled-delivery",
+        "campaigns-building-campaign-calendar",
+        "campaigns-building-api-triggered-delivery",
+        "campaigns-building-campaign-connector",
+        "campaigns-building-attribute-triggers",
+        "campaigns-building-rate-limiting",
+        "campaigns-faq"
+      ]
+    },
+    "engineer-api-data": {
+      "role": "braze-engineer",
+      "summary": "API usage, webhook troubleshooting, user management, data type operations, and technical help resources.",
+      "topics": [
+        "help-home",
+        "help-help-articles",
+        "help-overview",
+        "help-api",
+        "help-api-webhook-connected-content-errors",
+        "help-api-delete-user",
+        "help-api-attribute-name-id-across-sources",
+        "help-data",
+        "help-data-dispatch-id",
+        "help-data-change-custom-data-type",
+        "help-data-blocklisting-deletion"
+      ]
+    },
+    "engineer-partner-integration": {
+      "role": "braze-engineer",
+      "summary": "Technical setup for ISV partners including data connectors, cohort imports, Currents integration, and Snowflake data sharing.",
+      "topics": [
+        "partners-isv-partners",
+        "partners-isv-api-partner",
+        "partners-isv-currents-integration",
+        "partners-isv-cohort-import",
+        "partners-isv-data-transformation",
+        "partners-isv-snowflake-datasharing",
+        "partners-isv-best-practices"
+      ]
+    },
+    "architect-canvas-components": {
+      "role": "braze-architect",
+      "summary": "Design and orchestration of Canvas step types including message, delay, decision split, audience paths, experiments, and AI agent steps.",
+      "topics": [
+        "canvas-canvas-components",
+        "canvas-components-message-step",
+        "canvas-components-delay-step",
+        "canvas-components-decision-split",
+        "canvas-components-action-paths",
+        "canvas-components-audience-paths",
+        "canvas-components-user-update",
+        "canvas-components-experiment-step",
+        "canvas-components-experiment-winning-path",
+        "canvas-components-experiment-personalized-paths",
+        "canvas-components-feature-flags",
+        "canvas-components-context",
+        "canvas-components-content-optimizer-step",
+        "canvas-components-agent-step",
+        "canvas-components-audience-sync",
+        "canvas-create-a-canvas-rate-limiting"
+      ]
+    },
+    "architect-templates": {
+      "role": "braze-architect",
+      "summary": "Design patterns for Canvas templates including Braze-provided templates for onboarding, abandoned cart, lapsed user, and custom template creation.",
+      "topics": [
+        "canvas-get-started-braze-templates",
+        "canvas-get-started-braze-templates-abandoned-cart",
+        "canvas-get-started-braze-templates-back-in-stock",
+        "canvas-get-started-braze-templates-email-signup",
+        "canvas-get-started-braze-templates-feature-adoption",
+        "canvas-get-started-braze-templates-lapsed-user",
+        "canvas-get-started-braze-templates-onboarding",
+        "canvas-get-started-braze-templates-post-purchase-feedback",
+        "canvas-get-started-braze-templates-preference-survey",
+        "canvas-create-a-canvas-canvas-templates",
+        "canvas-create-a-canvas-templates"
+      ]
+    },
+    "architect-audience-sync": {
+      "role": "braze-architect",
+      "summary": "Cross-platform audience synchronization design across advertising platforms including Facebook, Google, TikTok, LinkedIn, and programmatic networks.",
+      "topics": [
+        "partners-canvas-audience-sync",
+        "partners-audience-sync-overview",
+        "partners-audience-sync-facebook",
+        "partners-audience-sync-google",
+        "partners-audience-sync-tiktok",
+        "partners-audience-sync-snapchat",
+        "partners-audience-sync-pinterest",
+        "partners-audience-sync-linkedin",
+        "partners-audience-sync-trade-desk",
+        "partners-audience-sync-criteo",
+        "partners-audience-sync-faq",
+        "canvas-components-audience-sync"
+      ]
+    },
+    "architect-ai-providers": {
+      "role": "braze-architect",
+      "summary": "Integration architecture for AI model providers including OpenAI, Google Gemini, and Anthropic within Braze messaging workflows.",
+      "topics": [
+        "partners-ai-model-providers",
+        "partners-ai-openai",
+        "partners-ai-google-gemini",
+        "partners-ai-anthropic"
+      ]
+    },
+    "analyst-campaign-reporting": {
+      "role": "braze-analyst",
+      "summary": "Campaign performance analysis including funnel reports, retention analysis, engagement metrics, alerts, and search operations.",
+      "topics": [
+        "campaigns-managing-campaigns",
+        "campaigns-testing-campaign-analytics",
+        "campaigns-testing-campaign-funnel-report",
+        "campaigns-testing-retention-reports",
+        "campaigns-managing-campaign-alerts",
+        "campaigns-managing-search-campaigns"
+      ]
+    },
+    "analyst-data-management": {
+      "role": "braze-analyst",
+      "summary": "Data operations including dispatch tracking, custom data types, blocklisting, cross-source attribute management, and analytics partner integration.",
+      "topics": [
+        "help-data",
+        "help-data-dispatch-id",
+        "help-data-change-custom-data-type",
+        "help-data-blocklisting-deletion",
+        "help-api-attribute-name-id-across-sources",
+        "partners-data-and-analytics"
+      ]
+    },
+    "strategist-canvas-planning": {
+      "role": "braze-strategist",
+      "summary": "Strategic planning for Canvas-based engagement flows, lifecycle journeys, and multi-step user experiences leveraging templates and best practices.",
+      "topics": [
+        "canvas-get-started",
+        "canvas-get-started-the-basics",
+        "canvas-get-started-canvas-outlines",
+        "canvas-ideas-and-strategies",
+        "canvas-managing-canvases",
+        "canvas-get-started-braze-templates-lapsed-user",
+        "canvas-get-started-braze-templates-onboarding",
+        "canvas-get-started-braze-templates-feature-adoption",
+        "canvas-get-started-braze-templates-abandoned-cart"
+      ]
+    },
+    "strategist-campaign-strategy": {
+      "role": "braze-strategist",
+      "summary": "Campaign strategy including retargeting, lapsed user capture, booking use cases, active user engagement, and cross-channel best practices.",
+      "topics": [
+        "campaigns-ideas-and-strategies",
+        "campaigns-ideas-best-practices",
+        "campaigns-ideas-retargeting",
+        "campaigns-ideas-capturing-lapsing-users",
+        "campaigns-ideas-active-user-campaigns",
+        "campaigns-ideas-new-features",
+        "campaigns-ideas-booking-use-case",
+        "campaigns-ideas-install-attribution",
+        "campaigns-ideas-add-to-calendar-links",
+        "campaigns-ideas-zoom"
+      ]
+    },
+    "strategist-partner-ecosystem": {
+      "role": "braze-strategist",
+      "summary": "Strategic leverage of the Braze partner ecosystem including e-commerce, messaging orchestration, data analytics, and channel extensions.",
+      "topics": [
+        "partners-home",
+        "partners-ecommerce",
+        "partners-message-orchestration",
+        "partners-data-and-analytics",
+        "partners-additional-channels-and-extensions",
+        "partners-third-party-liability"
+      ]
+    },
+    "tester-canvas-testing": {
+      "role": "braze-tester",
+      "summary": "Canvas testing workflows, troubleshooting common issues, experiment validation, and FAQ resolution.",
+      "topics": [
+        "canvas-testing-canvases",
+        "canvas-troubleshooting",
+        "canvas-faqs",
+        "canvas-components-experiment-step",
+        "canvas-components-experiment-winning-path",
+        "canvas-components-experiment-personalized-paths"
+      ]
+    },
+    "tester-campaign-testing": {
+      "role": "braze-tester",
+      "summary": "Campaign testing including test message sending, triggered action validation, analytics verification, and post-launch change management.",
+      "topics": [
+        "campaigns-testing-and-more",
+        "campaigns-testing-sending-test-messages",
+        "campaigns-testing-triggered-action-based",
+        "campaigns-testing-campaign-analytics",
+        "campaigns-testing-retention-reports",
+        "campaigns-testing-campaign-funnel-report",
+        "campaigns-managing-change-after-launch",
+        "campaigns-faq"
+      ]
+    },
+    "engineer-location": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of location-based partner services including geofencing, weather data, and proximity detection.",
+      "topics": [
+        "message-personalization-location",
+        "location-radar",
+        "location-loplat",
+        "location-infillion",
+        "location-foursquare",
+        "location-flybuy",
+        "location-bluedot",
+        "location-accuweather"
+      ]
+    },
+    "engineer-localization": {
+      "role": "braze-engineer",
+      "summary": "Technical setup of translation management and localization partner platforms for multi-language content delivery.",
+      "topics": [
+        "message-personalization-localization",
+        "localization-transifex",
+        "localization-tangerine",
+        "localization-smartling",
+        "localization-phrase",
+        "localization-lokalise",
+        "localization-lilt",
+        "localization-crowdin"
+      ]
+    },
+    "engineer-shopify": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of Shopify-Braze integrations including standard, custom, and catalog sync configurations.",
+      "topics": [
+        "ecommerce-shopify",
+        "shopify-shopify-overview",
+        "shopify-shopify-standard-integration",
+        "shopify-shopify-standard-integration-third-party-tagging",
+        "shopify-shopify-custom-integration",
+        "shopify-shopify-data-features",
+        "shopify-shopify-catalogs",
+        "shopify-multiple-stores",
+        "shopify-discount-codes"
+      ]
+    },
+    "engineer-deeplinking": {
+      "role": "braze-engineer",
+      "summary": "Technical configuration of deep linking and mobile attribution partner SDKs for cross-platform user routing.",
+      "topics": [
+        "message-orchestration-deeplinking",
+        "deeplinking-vizbee-for-tv-deeplinking",
+        "deeplinking-kochava",
+        "deeplinking-branch-for-deeplinking",
+        "deeplinking-appsflyer",
+        "deeplinking-appsflyer-appsflyer",
+        "attribution-appsflyer",
+        "attribution-branch-for-attribution",
+        "attribution-kochava"
+      ]
+    },
+    "engineer-payments": {
+      "role": "braze-engineer",
+      "summary": "Technical integration of payment processors, subscription management platforms, and order fulfillment systems.",
+      "topics": [
+        "ecommerce-ordering-payments-subscription",
+        "ecommerce-payments",
+        "ordering-payments-subscription-stripe",
+        "ordering-payments-subscription-revenuecat",
+        "ordering-payments-subscription-recurly",
+        "ordering-payments-subscription-olo",
+        "ordering-payments-subscription-narvar",
+        "ecommerce-payments-transcend"
+      ]
+    },
+    "architect-message-orchestration": {
+      "role": "braze-architect",
+      "summary": "System design for email template tooling, CMS integration, A/B testing frameworks, and content delivery pipelines.",
+      "topics": [
+        "message-orchestration-templates",
+        "message-orchestration-cms-dam",
+        "message-orchestration-ab-testing",
+        "message-orchestration-cms-dam-contentful",
+        "message-orchestration-ab-testing-jacquard",
+        "templates-taxi-for-email",
+        "templates-stripo",
+        "templates-stensul",
+        "templates-smartersends",
+        "templates-sageflo",
+        "templates-knak",
+        "templates-jasper",
+        "templates-iam-studio",
+        "templates-email-love",
+        "templates-dyspatch",
+        "templates-denada",
+        "templates-blayer",
+        "templates-alpaco",
+        "templates-mailizio"
+      ]
+    },
+    "architect-ecommerce": {
+      "role": "braze-architect",
+      "summary": "Architecture design for e-commerce ecosystems including storefront platforms, mobile commerce, and product discovery systems.",
+      "topics": [
+        "ecommerce-tapcart",
+        "ecommerce-mobile-app-platform",
+        "ecommerce-mobile-app-platform-poq",
+        "ecommerce-product-search-recommendations",
+        "product-search-recommendations-stylitics",
+        "product-search-recommendations-constructor",
+        "product-search-recommendations-algolia",
+        "ecommerce-shopify",
+        "shopify-shopify-overview"
+      ]
+    },
+    "architect-personalization": {
+      "role": "braze-architect",
+      "summary": "Designs personalization infrastructure spanning location awareness, creative tooling, and dynamic content delivery.",
+      "topics": [
+        "message-personalization-dynamic-content",
+        "message-personalization-creative-studio",
+        "message-personalization-creative-studio-figma",
+        "message-personalization-creative-studio-canva",
+        "message-personalization-referrals",
+        "message-personalization-location",
+        "message-personalization-localization"
+      ]
+    },
+    "analyst-attribution": {
+      "role": "braze-analyst",
+      "summary": "Attribution modeling, campaign measurement, and multi-touch analysis across mobile and web attribution partners.",
+      "topics": [
+        "message-orchestration-attribution",
+        "attribution-singular",
+        "attribution-linkrunner",
+        "attribution-kochava",
+        "attribution-branch-for-attribution",
+        "attribution-appsflyer",
+        "attribution-airbridge",
+        "attribution-adjust"
+      ]
+    },
+    "analyst-ecommerce": {
+      "role": "braze-analyst",
+      "summary": "Analytics for e-commerce performance, customer behavior, and operational workflow optimization across partner platforms.",
+      "topics": [
+        "ecommerce-analytics-workflow",
+        "analytics-workflow-wunderkind",
+        "analytics-workflow-tangerine",
+        "analytics-workflow-personalize",
+        "analytics-workflow-peak",
+        "analytics-workflow-okendo",
+        "analytics-workflow-lexer"
+      ]
+    },
+    "analyst-retargeting": {
+      "role": "braze-analyst",
+      "summary": "Audience segmentation, retargeting performance analysis, and cross-platform audience insights across ad and data partners.",
+      "topics": [
+        "message-orchestration-retargeting",
+        "retargeting-vizbee",
+        "retargeting-swym",
+        "retargeting-remerge",
+        "retargeting-quikly",
+        "retargeting-looker",
+        "retargeting-liveramp",
+        "retargeting-jampp",
+        "retargeting-facebook",
+        "retargeting-contentsquare",
+        "retargeting-adikteev"
+      ]
+    },
+    "strategist-loyalty": {
+      "role": "braze-strategist",
+      "summary": "Strategic design of loyalty programs, promotional campaigns, and dynamic pricing initiatives using Braze partner integrations.",
+      "topics": [
+        "ecommerce-loyalty",
+        "ecommerce-dynamic-pricing-promotions",
+        "loyalty-yotpo",
+        "loyalty-voucherify",
+        "loyalty-talonone",
+        "loyalty-swym",
+        "loyalty-kognitiv",
+        "loyalty-antavo",
+        "loyalty-voucherify-voucherify",
+        "loyalty-voucherify-voucherify-using-braze-promotion-codes-list",
+        "loyalty-voucherify-voucherify-fetching-data-through-braze-connected-content",
+        "loyalty-voucherify-voucherify-distribution-with-braze-custom-attributes",
+        "dynamic-pricing-promotions-voucherify",
+        "dynamic-pricing-promotions-viralsweep",
+        "dynamic-pricing-promotions-talonone"
+      ]
+    },
+    "tester-integrations": {
+      "role": "braze-tester",
+      "summary": "Validation and quality assurance for message orchestration and personalization partner integrations.",
+      "topics": [
+        "message-orchestration-deeplinking",
+        "message-orchestration-attribution",
+        "message-orchestration-retargeting",
+        "message-orchestration-templates",
+        "message-personalization-location",
+        "message-personalization-localization",
+        "deeplinking-branch-for-deeplinking",
+        "deeplinking-appsflyer",
+        "attribution-adjust",
+        "attribution-appsflyer"
+      ]
+    },
+    "tester-ecommerce": {
+      "role": "braze-tester",
+      "summary": "End-to-end testing of e-commerce partner integrations including Shopify, payments, and loyalty program data flows.",
+      "topics": [
+        "ecommerce-shopify",
+        "ecommerce-payments",
+        "ecommerce-loyalty",
+        "ecommerce-ordering-payments-subscription",
+        "shopify-shopify-standard-integration",
+        "shopify-shopify-custom-integration",
+        "shopify-shopify-data-features",
+        "ordering-payments-subscription-stripe",
+        "ordering-payments-subscription-revenuecat",
+        "loyalty-voucherify",
+        "loyalty-yotpo"
+      ]
+    },
+    "engineer-channel-integrations": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of additional messaging channels including instant chat, support, direct mail, mobile wallet, and advertising partners.",
+      "topics": [
+        "additional-channels-support",
+        "additional-channels-shopgate",
+        "additional-channels-mobile-wallet",
+        "additional-channels-instant-chat",
+        "additional-channels-direct-mail",
+        "additional-channels-advertising",
+        "additional-channels-support-zendesk",
+        "additional-channels-support-pypestream",
+        "additional-channels-mobile-wallet-passkit",
+        "additional-channels-instant-chat-zendesk-chat",
+        "additional-channels-instant-chat-sendbird",
+        "additional-channels-instant-chat-regal",
+        "additional-channels-instant-chat-pypestream",
+        "additional-channels-instant-chat-messenger",
+        "additional-channels-instant-chat-front",
+        "additional-channels-and-extensions-additional-channels"
+      ]
+    },
+    "engineer-extension-integrations": {
+      "role": "braze-engineer",
+      "summary": "Technical implementation of platform extensions including surveys, rewards, gamification, learning, and landing page partners.",
+      "topics": [
+        "extensions-surveys",
+        "extensions-rewards",
+        "extensions-learning",
+        "extensions-landing-pages",
+        "extensions-gamification",
+        "extensions-learning-edume",
+        "extensions-rewards-punchh",
+        "extensions-rewards-nift",
+        "extensions-rewards-dots-eco",
+        "extensions-surveys-typeform",
+        "extensions-surveys-survicate",
+        "extensions-surveys-komo",
+        "extensions-surveys-jebbit",
+        "extensions-surveys-iterate",
+        "extensions-surveys-digioh",
+        "additional-channels-and-extensions-extensions"
+      ]
+    },
+    "engineer-data-connectors": {
+      "role": "braze-engineer",
+      "summary": "Technical setup of workflow automation tools, cloud storage destinations, and data pipeline connectors.",
+      "topics": [
+        "workflow-automation-zapier",
+        "workflow-automation-snowplow",
+        "workflow-automation-nexla",
+        "workflow-automation-mozart-data",
+        "workflow-automation-metarouter",
+        "workflow-automation-fivetran",
+        "workflow-automation-airbyte",
+        "cloud-storage-microsoft-azure-blob-storage-for-currents",
+        "cloud-storage-google-cloud-storage-for-currents",
+        "cloud-storage-amazon-s3",
+        "data-and-analytics-workflow-automation",
+        "data-and-analytics-cloud-storage"
+      ]
+    },
+    "architect-data-warehousing": {
+      "role": "braze-architect",
+      "summary": "Designs and manages Snowflake data warehouse schemas, ETL pipelines, entity relationships, and data retention policies.",
+      "topics": [
+        "data-warehouses-snowflake",
+        "data-warehouses-snowflake-user-attributes",
+        "data-warehouses-snowflake-sample-queries",
+        "data-warehouses-snowflake-faqs",
+        "data-warehouses-snowflake-etl-pipeline-setup",
+        "data-warehouses-snowflake-entity-relationships",
+        "data-warehouses-snowflake-data-sharing",
+        "data-warehouses-snowflake-data-retention",
+        "data-and-analytics-data-warehouses"
+      ]
+    },
+    "architect-data-privacy": {
+      "role": "braze-architect",
+      "summary": "Designs privacy-compliant data architectures using consent management and data governance partners.",
+      "topics": [
+        "data-privacy-onetrust",
+        "data-privacy-ketch",
+        "data-privacy-datagrail",
+        "data-and-analytics-data-privacy"
+      ]
+    },
+    "analyst-analytics-platforms": {
+      "role": "braze-analyst",
+      "summary": "Configures analytics and attribution platforms for user behavior tracking, campaign measurement, and engagement analysis.",
+      "topics": [
+        "analytics-thoughtspot",
+        "analytics-tellius",
+        "analytics-saleswings",
+        "analytics-npaw",
+        "analytics-mixpanel",
+        "analytics-kubit",
+        "analytics-kickbox",
+        "analytics-inbox-monster",
+        "analytics-heap",
+        "analytics-contentsquare",
+        "analytics-branch",
+        "analytics-apteligent",
+        "analytics-appsflyer",
+        "analytics-amplitude",
+        "analytics-airbridge",
+        "data-and-analytics-analytics"
+      ]
+    },
+    "analyst-business-intelligence": {
+      "role": "braze-analyst",
+      "summary": "Configures BI tools and dashboards for executive reporting, operational metrics, and marketing performance visualization.",
+      "topics": [
+        "business-intelligence-thoughtspot",
+        "business-intelligence-tellius",
+        "business-intelligence-mozart-data",
+        "business-intelligence-mixpanel",
+        "business-intelligence-looker",
+        "business-intelligence-kubit",
+        "business-intelligence-heap",
+        "business-intelligence-datadog",
+        "business-intelligence-clarisights",
+        "data-and-analytics-business-intelligence",
+        "analytics-thoughtspot",
+        "analytics-mixpanel",
+        "analytics-heap"
+      ]
+    },
+    "analyst-cohort-management": {
+      "role": "braze-analyst",
+      "summary": "Manages cohort imports, audience segmentation, and customer data platform integrations for targeted campaigns.",
+      "topics": [
+        "cohort-import-treasuredata",
+        "cohort-import-splio",
+        "cohort-import-kubit",
+        "cohort-import-appsflyer-audiences",
+        "reverse-etl-hightouch-cohort-import",
+        "reverse-etl-census-cohort-import",
+        "data-and-analytics-cohort-import",
+        "data-and-analytics-customer-data-platform"
+      ]
+    },
+    "strategist-channel-strategy": {
+      "role": "braze-strategist",
+      "summary": "Advises on channel partner selection, multi-channel orchestration, and CRM integration strategy for customer engagement.",
+      "topics": [
+        "additional-channels-and-extensions-additional-channels",
+        "additional-channels-and-extensions-extensions",
+        "additional-channels-support",
+        "additional-channels-instant-chat",
+        "additional-channels-direct-mail",
+        "additional-channels-advertising",
+        "additional-channels-mobile-wallet",
+        "data-and-analytics-customer-relationship-management",
+        "customer-relationship-management-actionableme"
+      ]
+    },
+    "strategist-loyalty-programs": {
+      "role": "braze-strategist",
+      "summary": "Designs loyalty program architectures and rewards partner integrations to drive retention and lifetime value.",
+      "topics": [
+        "loyalty-voucherify",
+        "loyalty-talonone",
+        "loyalty-sessionm",
+        "loyalty-punchh",
+        "loyalty-openloyalty",
+        "loyalty-kognitiv",
+        "loyalty-friendbuy",
+        "loyalty-eagleeye",
+        "loyalty-antavo",
+        "loyalty-punchh-overview",
+        "loyalty-punchh-code-generation",
+        "extensions-rewards-punchh",
+        "extensions-rewards-nift",
+        "extensions-rewards-dots-eco",
+        "data-and-analytics-loyalty"
+      ]
+    },
+    "strategist-lead-generation": {
+      "role": "braze-strategist",
+      "summary": "Optimizes lead capture funnels, interactive content, and acquisition partner integrations for growth.",
+      "topics": [
+        "leads-capture-wyng",
+        "leads-capture-wunderkind",
+        "leads-capture-viralsweep",
+        "leads-capture-quikly",
+        "leads-capture-outgrow",
+        "leads-capture-justuno",
+        "leads-capture-jebbit",
+        "leads-capture-facebook-via-zapier",
+        "extensions-surveys-jebbit",
+        "data-and-analytics-leads-capture"
+      ]
+    },
+    "tester-experimentation": {
+      "role": "braze-tester",
+      "summary": "Designs and manages experiments using A/B testing platforms for campaign optimization and feature validation.",
+      "topics": [
+        "ab-testing-vwo",
+        "ab-testing-optimizely",
+        "ab-testing-kameleoon",
+        "ab-testing-eppo",
+        "data-and-analytics-ab-testing"
+      ]
+    },
+    "engineer-sdk-integration": {
+      "role": "braze-engineer",
+      "summary": "Implements and configures Braze SDK integration including authentication, version management, and tag managers.",
+      "topics": [
+        "sdk-integration-authentication",
+        "sdk-integration-version-management",
+        "sdk-integration-rate-limits",
+        "sdk-integration-google-tag-manager",
+        "sdk-integration-chatgpt-apps",
+        "sdk-integration-verbose-logging",
+        "sdk-integration-reading-verbose-logs",
+        "sdk-integration-debugging"
+      ]
+    },
+    "engineer-rest-api": {
+      "role": "braze-engineer",
+      "summary": "Builds and integrates Braze REST API endpoints for messaging, SMS, email, and product recommendations.",
+      "topics": [
+        "rest-api-sending-messages",
+        "rest-api-sending-sms-messages",
+        "rest-api-sending-email-messages",
+        "rest-api-reminder-messaging",
+        "rest-api-recommending-products"
+      ]
+    },
+    "engineer-push-notifications": {
+      "role": "braze-engineer",
+      "summary": "Implements push notification delivery including rich push, push stories, deep linking, and silent notifications.",
+      "topics": [
+        "push-notifications-customization",
+        "push-notifications-rich",
+        "push-notifications-push-stories",
+        "push-notifications-silent",
+        "push-notifications-deep-linking",
+        "push-notifications-ios-deep-linking-guide",
+        "push-notifications-deep-linking-troubleshooting",
+        "push-notifications-subscription-states",
+        "push-notifications-soft-push-prompts",
+        "push-notifications-logging-message-data",
+        "push-notifications-examples",
+        "push-notifications-sending-test-messages",
+        "push-notifications-troubleshooting",
+        "developer-guide-push-notifications",
+        "legacy-ios-push-integration",
+        "legacy-ios-push-implementation-guide",
+        "legacy-ios-push-silent-push-notifications",
+        "legacy-ios-push-push-story",
+        "legacy-ios-push-push-primer",
+        "legacy-ios-push-customization",
+        "legacy-ios-push-rich-notifications",
+        "legacy-ios-push-custom-sounds",
+        "legacy-ios-push-badges",
+        "legacy-ios-push-advanced-settings",
+        "legacy-ios-push-action-buttons",
+        "legacy-ios-push-ignoring-internal-push"
+      ]
+    },
+    "engineer-docs-contributing": {
+      "role": "braze-engineer",
+      "summary": "Contributes to Braze documentation following style guides, YAML front matter conventions, and content management workflows.",
+      "topics": [
+        "contributing-home",
+        "contributing-your-first-contribution",
+        "contributing-style-guide",
+        "contributing-content-types",
+        "contributing-content-management",
+        "contributing-yaml-front-matter",
+        "contributing-yaml-front-matter-metadata",
+        "contributing-yaml-front-matter-page-layouts",
+        "contributing-styling-examples",
+        "contributing-mermaid-support",
+        "contributing-bdocs",
+        "contributing-local-environment",
+        "contributing-git-and-github",
+        "contributing-generating-a-preview",
+        "contributing-troubleshooting"
+      ]
+    },
+    "architect-cdp-design": {
+      "role": "braze-architect",
+      "summary": "Architects customer data platform integrations and data flow patterns across Braze and third-party platforms.",
+      "topics": [
+        "cdp-segment",
+        "cdp-mparticle",
+        "cdp-rudderstack",
+        "cdp-snowplow",
+        "cdp-treasure-data",
+        "cdp-lytics",
+        "cdp-lexer",
+        "cdp-redpoint",
+        "cdp-octolis",
+        "cdp-lemnisk",
+        "cdp-merkury",
+        "cdp-toovio",
+        "cdp-simonai",
+        "cdp-adobe",
+        "cdp-adobe-adobe",
+        "cdp-adobe-event-forwarding-extension",
+        "cdp-tealium",
+        "cdp-zeotap",
+        "personalization-engines-amazon-personalize",
+        "personalized-recommendations-amazon-personalize"
+      ]
+    },
+    "architect-data-connectors": {
+      "role": "braze-architect",
+      "summary": "Configures Braze Currents and event forwarding connectors for real-time data streaming to analytics platforms.",
+      "topics": [
+        "cdp-amplitude-amplitude-for-currents",
+        "cdp-segment-segment-for-currents",
+        "cdp-tealium-tealium-for-currents",
+        "cdp-zeotap-zeotap-for-currents",
+        "cdp-adobe-adobe-for-currents",
+        "cdp-adobe-event-forwarding-extension"
+      ]
+    },
+    "analyst-cdp-platforms": {
+      "role": "braze-analyst",
+      "summary": "Manages customer data platform configurations and analyzes user data flows across Amplitude, Segment, Tealium, and other CDPs.",
+      "topics": [
+        "cdp-amplitude-amplitude-user-profile-api",
+        "cdp-amplitude-amplitude-for-currents",
+        "cdp-amplitude-amplitude-cohort-import",
+        "cdp-amplitude-amplitude-audiences",
+        "cdp-segment-segment",
+        "cdp-segment-segment-for-currents",
+        "cdp-segment-segment-engage",
+        "cdp-tealium-tealium",
+        "cdp-tealium-tealium-for-currents",
+        "cdp-tealium-tealium-audience-stream",
+        "cdp-zeotap-zeotap",
+        "cdp-zeotap-zeotap-for-currents",
+        "cdp-zeotap-symphony",
+        "cdp-adobe-adobe",
+        "cdp-adobe-adobe-for-currents",
+        "personalized-recommendations-amplitude",
+        "personalized-recommendations-fullstory"
+      ]
+    },
+    "analyst-audience-management": {
+      "role": "braze-analyst",
+      "summary": "Manages audience segmentation, cohort imports, and user profile enrichment across CDP integrations.",
+      "topics": [
+        "cdp-amplitude-amplitude-audiences",
+        "cdp-amplitude-amplitude-cohort-import",
+        "cdp-amplitude-amplitude-user-profile-api",
+        "cdp-tealium-tealium-audience-stream",
+        "cdp-segment-segment-engage",
+        "cdp-zeotap-symphony"
+      ]
+    },
+    "strategist-dynamic-content": {
+      "role": "braze-strategist",
+      "summary": "Designs dynamic content personalization strategies using personalization engines and content management platforms.",
+      "topics": [
+        "dynamic-content-visual-and-interactive-content",
+        "dynamic-content-personalized-recommendations",
+        "dynamic-content-personalization-engines",
+        "dynamic-content-content-optimization-testing",
+        "dynamic-content-otherlevels",
+        "personalization-engines-sheetlabs",
+        "personalization-engines-movable-ink",
+        "personalization-engines-limbik",
+        "personalization-engines-dynamic-yield",
+        "personalization-engines-amazon-personalize"
+      ]
+    },
+    "strategist-visual-content": {
+      "role": "braze-strategist",
+      "summary": "Integrates visual and interactive content partners for rich messaging experiences in Braze campaigns.",
+      "topics": [
+        "visual-and-interactive-content-movable-ink",
+        "visual-and-interactive-content-storyly",
+        "visual-and-interactive-content-stylitics",
+        "visual-and-interactive-content-niftyimages",
+        "visual-and-interactive-content-cloudinary",
+        "visual-and-interactive-content-playable",
+        "visual-and-interactive-content-seen",
+        "visual-and-interactive-content-judo",
+        "visual-and-interactive-content-yotpo",
+        "visual-and-interactive-content-wyng",
+        "visual-and-interactive-content-wsc-sports",
+        "visual-and-interactive-content-worthy",
+        "visual-and-interactive-content-videosmart",
+        "visual-and-interactive-content-odicci",
+        "visual-and-interactive-content-future-anthem",
+        "personalization-engines-movable-ink",
+        "personalized-recommendations-movable-ink"
+      ]
+    },
+    "tester-content-optimization": {
+      "role": "braze-tester",
+      "summary": "Tests and optimizes message content using A/B testing partners and content optimization tools.",
+      "topics": [
+        "content-optimization-testing-trustpilot",
+        "content-optimization-testing-notify",
+        "content-optimization-testing-just-words",
+        "content-optimization-testing-just-ai",
+        "content-optimization-testing-jacquard"
+      ]
+    },
+    "tester-debugging": {
+      "role": "braze-tester",
+      "summary": "Diagnoses SDK issues, push notification failures, and integration problems across Braze implementations.",
+      "topics": [
+        "sdk-integration-debugging",
+        "sdk-integration-verbose-logging",
+        "sdk-integration-reading-verbose-logs",
+        "push-notifications-troubleshooting",
+        "push-notifications-sending-test-messages",
+        "push-notifications-deep-linking-troubleshooting",
+        "contributing-troubleshooting"
+      ]
+    },
+    "engineer-sdk-setup": {
+      "role": "braze-engineer",
+      "summary": "Covers initial SDK setup, platform overview, and integration patterns for onboarding new Braze implementations.",
+      "topics": [
+        "getting-started-sdk-overview",
+        "getting-started-platform-overview",
+        "getting-started-integration-overview",
+        "getting-started-customization-overview",
+        "getting-started-build-with-llm",
+        "developer-guide-sdk-integration"
+      ]
+    },
+    "engineer-platform-ios": {
+      "role": "braze-engineer",
+      "summary": "Platform-specific implementation for iOS, Swift, and visionOS including version-specific guidance.",
+      "topics": [
+        "platforms-swift",
+        "platforms-swift-visionos",
+        "platforms-swift-ios-18",
+        "platforms-swift-ios-17",
+        "platforms-swift-ios-16",
+        "platforms-swift-ios-15",
+        "platforms-swift-ios-14"
+      ]
+    },
+    "engineer-platform-web": {
+      "role": "braze-engineer",
+      "summary": "Web SDK implementation covering browsers, smart TVs, extensions, and security policies.",
+      "topics": [
+        "platforms-web",
+        "platforms-web-smart-tvs",
+        "platforms-web-content-security-policy",
+        "platforms-web-browser-extensions",
+        "platforms-web-accessibility"
+      ]
+    },
+    "engineer-platform-android": {
+      "role": "braze-engineer",
+      "summary": "Android-specific SDK implementation and version-specific feature support.",
+      "topics": [
+        "platforms-android",
+        "platforms-android-android-13",
+        "platforms-tv-and-ott"
+      ]
+    },
+    "engineer-api": {
+      "role": "braze-engineer",
+      "summary": "REST API usage, MCP server setup, and programmatic integration with Braze services.",
+      "topics": [
+        "developer-guide-rest-api",
+        "mcp-server-usage",
+        "mcp-server-setup",
+        "mcp-server-available-api-functions",
+        "developer-guide-mcp-server"
+      ]
+    },
+    "engineer-legacy-sdks": {
+      "role": "braze-engineer",
+      "summary": "Maintenance and migration of legacy iOS, tvOS, and macOS SDK implementations.",
+      "topics": [
+        "platforms-legacy-sdks",
+        "legacy-sdks-tvos",
+        "legacy-sdks-macos",
+        "legacy-sdks-ios",
+        "legacy-sdks-macos-initial-sdk-setup",
+        "legacy-sdks-tvos-initial-sdk-setup",
+        "legacy-ios-setup-overview",
+        "legacy-ios-setup-ios-sdk-integration",
+        "legacy-ios-setup-installation-methods",
+        "legacy-ios-setup-completing-integration",
+        "legacy-ios-setup-other-sdk-customizations",
+        "legacy-ios-setup-swift-package-manager",
+        "legacy-ios-setup-manual-integration-options",
+        "legacy-ios-setup-cocoapods",
+        "legacy-ios-setup-carthage-integration"
+      ]
+    },
+    "architect-system-design": {
+      "role": "braze-architect",
+      "summary": "Core Braze platform architecture including network, storage, localization, and geofencing infrastructure.",
+      "topics": [
+        "getting-started-architecture-overview",
+        "developer-guide-network",
+        "developer-guide-storage",
+        "developer-guide-localization",
+        "developer-guide-geofences",
+        "developer-guide-live-notifications",
+        "developer-guide-references"
+      ]
+    },
+    "architect-security": {
+      "role": "braze-architect",
+      "summary": "Security qualifications, vulnerability disclosure, and compliance requirements for Braze integrations.",
+      "topics": [
+        "disclosures-security-qualifications",
+        "disclosures-security-and-vulnerability-disclosure",
+        "disclosures-open-source-software-disclosure",
+        "disclosures-innovation-statement"
+      ]
+    },
+    "analyst-event-tracking": {
+      "role": "braze-analyst",
+      "summary": "Configuration of custom events, purchase logging, session tracking, and uninstall detection.",
+      "topics": [
+        "analytics-logging-events",
+        "analytics-logging-purchases",
+        "analytics-tracking-sessions",
+        "analytics-tracking-uninstalls",
+        "analytics-tracking-location"
+      ]
+    },
+    "analyst-user-profiling": {
+      "role": "braze-analyst",
+      "summary": "User identification, attribute management, and data collection governance.",
+      "topics": [
+        "analytics-setting-user-ids",
+        "analytics-setting-user-attributes",
+        "analytics-managing-data-collection"
+      ]
+    },
+    "analyst-channel-analytics": {
+      "role": "braze-analyst",
+      "summary": "Channel-specific analytics for push notifications, in-app messages, content cards, and banners.",
+      "topics": [
+        "analytics-logging-channel-data",
+        "analytics-logging-channel-data-push-notifications",
+        "analytics-logging-channel-data-in-app-messages",
+        "analytics-logging-channel-data-content-cards",
+        "in-app-messages-logging-message-data",
+        "content-cards-logging-analytics",
+        "banners-analytics"
+      ]
+    },
+    "strategist-in-app-messaging": {
+      "role": "braze-strategist",
+      "summary": "Strategic use of in-app messages including customization, conditional display, and deferred triggers.",
+      "topics": [
+        "in-app-messages-customization",
+        "in-app-messages-tutorials",
+        "in-app-messages-gifs",
+        "in-app-messages-tutorials-deferring-triggered-messages",
+        "in-app-messages-tutorials-customizing-message-styling",
+        "in-app-messages-tutorials-conditionally-displaying-messages"
+      ]
+    },
+    "strategist-content-delivery": {
+      "role": "braze-strategist",
+      "summary": "Content card creation, customization, and inbox management for persistent content delivery.",
+      "topics": [
+        "content-cards-customizing-cards",
+        "content-cards-customizing-cards-style",
+        "content-cards-customizing-cards-feed",
+        "content-cards-customizing-cards-behavior",
+        "content-cards-embedding-gifs"
+      ]
+    },
+    "strategist-feature-flags": {
+      "role": "braze-strategist",
+      "summary": "Feature flag management, experiment design, and canvas integration for controlled rollouts.",
+      "topics": [
+        "feature-flags-create",
+        "feature-flags-experiments",
+        "feature-flags-canvas",
+        "feature-flags-faq"
+      ]
+    },
+    "strategist-banners": {
+      "role": "braze-strategist",
+      "summary": "Banner placement strategy, migration from content cards, and engagement optimization.",
+      "topics": [
+        "banners-tutorial-displaying-banners",
+        "banners-placements",
+        "banners-migrating-from-content-cards",
+        "banners-faq"
+      ]
+    },
+    "tester-push-validation": {
+      "role": "braze-tester",
+      "summary": "Push notification testing, unit tests, and troubleshooting across platforms.",
+      "topics": [
+        "legacy-ios-push-testing",
+        "legacy-ios-push-unit-tests",
+        "legacy-ios-push-troubleshooting"
+      ]
+    },
+    "tester-messaging-validation": {
+      "role": "braze-tester",
+      "summary": "In-app message testing, banner validation, and cross-channel troubleshooting.",
+      "topics": [
+        "in-app-messages-sending-test-messages",
+        "in-app-messages-troubleshooting",
+        "banners-testing"
+      ]
+    },
+    "tester-sdk-validation": {
+      "role": "braze-tester",
+      "summary": "SDK integration testing, platform verification, and developer guide tutorials.",
+      "topics": [
+        "developer-guide-tutorials",
+        "developer-guide-home",
+        "developer-guide-getting-started",
+        "developer-guide-platforms",
+        "ios-sample-apps",
+        "api-postman-collection"
+      ]
+    },
+    "engineer-ios-setup": {
+      "role": "braze-engineer",
+      "summary": "Covers initial SDK installation, storage configuration, push notification setup, and changelog tracking for the legacy iOS SDK.",
+      "topics": [
+        "ios-initial-sdk-setup",
+        "ios-storage",
+        "ios-push-notifications",
+        "ios-changelog",
+        "ios-changelog-swift",
+        "ios-changelog-objc",
+        "ios-sample-apps"
+      ]
+    },
+    "engineer-in-app-messaging": {
+      "role": "braze-engineer",
+      "summary": "Implements and customizes in-app messages including display handling, delegates, triggers, orientation, view controllers, and click behaviors.",
+      "topics": [
+        "ios-in-app-messaging-overview",
+        "ios-in-app-messaging-implementation-guide",
+        "ios-in-app-messaging-delivery",
+        "ios-in-app-messaging-customization",
+        "ios-in-app-messaging-custom-app-store-review-prompt",
+        "ios-in-app-messaging-shareplay",
+        "ios-in-app-messaging-setting-delegates",
+        "ios-in-app-messaging-modal-dismissal",
+        "ios-in-app-messaging-key-value-pairs",
+        "ios-in-app-messaging-handling-in-app-display",
+        "ios-in-app-messaging-customizing-orientation",
+        "ios-in-app-messaging-custom-view-controller",
+        "ios-in-app-messaging-custom-triggering",
+        "ios-in-app-messaging-behavior-on-click",
+        "ios-in-app-messaging"
+      ]
+    },
+    "engineer-content-cards": {
+      "role": "braze-engineer",
+      "summary": "Integrates and customizes content card feeds including styling, click handling, badges, read/unread indicators, and carousel views.",
+      "topics": [
+        "ios-content-cards-integration",
+        "ios-content-cards-implementation-guide",
+        "ios-content-cards-refreshing-the-feed",
+        "ios-content-cards-multiple-feeds",
+        "ios-content-cards-customization",
+        "ios-content-cards-use-cases",
+        "ios-content-cards-read-unread-indicators",
+        "ios-content-cards-handling-clicks-manually",
+        "ios-content-cards-customizing-feed",
+        "ios-content-cards-custom-styling",
+        "ios-content-cards-badges",
+        "ios-content-cards-carousel-view",
+        "ios-content-cards"
+      ]
+    },
+    "engineer-advanced-ios": {
+      "role": "braze-engineer",
+      "summary": "Covers advanced integration scenarios including geofences, localization, deep linking, Google Tag Manager, network control, and beacon integration.",
+      "topics": [
+        "ios-advanced-locations-and-geofences",
+        "ios-advanced-localization",
+        "ios-advanced-linking",
+        "ios-advanced-google-tag-manager",
+        "ios-advanced-fine-network-traffic-control",
+        "ios-advanced-beacon-integration",
+        "ios-advanced-use-cases"
+      ]
+    },
+    "architect-api-fundamentals": {
+      "role": "braze-architect",
+      "summary": "Covers API basics, authentication, rate limits, error codes, endpoint overview, data retention policies, and Postman collection usage.",
+      "topics": [
+        "api-home",
+        "api-basics",
+        "api-endpoints",
+        "api-errors",
+        "api-api-limits",
+        "api-data-retention",
+        "api-identifier-types",
+        "api-network-connectivity-issues",
+        "api-postman-collection",
+        "api-use-cases",
+        "api-objects-filters"
+      ]
+    },
+    "architect-user-data-api": {
+      "role": "braze-architect",
+      "summary": "Manages user lifecycle through track, identify, merge, alias, and delete endpoints, plus external ID migration.",
+      "topics": [
+        "endpoints-user-data-post-user-track",
+        "endpoints-user-data-post-user-track-synchronous",
+        "endpoints-user-data-post-user-identify",
+        "endpoints-user-data-post-user-delete",
+        "endpoints-user-data-post-user-alias",
+        "endpoints-user-data-post-users-alias-update",
+        "endpoints-user-data-post-users-merge",
+        "endpoints-user-data-external-id-migration",
+        "endpoints-user-data-post-external-ids-rename",
+        "endpoints-user-data-post-external-ids-remove"
+      ]
+    },
+    "architect-messaging-api": {
+      "role": "braze-architect",
+      "summary": "Sends, schedules, and manages messages across channels including triggered campaigns, canvases, transactional messages, and live activities.",
+      "topics": [
+        "endpoints-messaging-send-messages",
+        "endpoints-messaging-schedule-messages",
+        "endpoints-messaging-live-activity",
+        "endpoints-messaging-duplicate-messages",
+        "endpoints-messaging-post-send-triggered-canvases",
+        "endpoints-messaging-post-send-triggered-campaigns",
+        "endpoints-messaging-post-send-transactional",
+        "endpoints-messaging-post-send-messages",
+        "endpoints-messaging-post-create-send-ids",
+        "endpoints-messaging-post-update-scheduled-triggered-canvases",
+        "endpoints-messaging-post-update-scheduled-triggered-campaigns",
+        "endpoints-messaging-post-update-scheduled-messages",
+        "endpoints-messaging-post-schedule-triggered-canvases",
+        "endpoints-messaging-post-schedule-triggered-campaigns",
+        "endpoints-messaging-post-schedule-messages",
+        "api-api-campaigns",
+        "api-api-campaigns-transactional"
+      ]
+    },
+    "architect-templates-api": {
+      "role": "braze-architect",
+      "summary": "Creates, updates, and manages email templates and reusable content blocks through the REST API.",
+      "topics": [
+        "endpoints-templates-email-templates",
+        "endpoints-templates-content-blocks",
+        "endpoints-templates-post-update-email-template",
+        "endpoints-templates-post-create-email-template",
+        "endpoints-templates-get-email-template-info",
+        "endpoints-templates-get-list-email-templates",
+        "endpoints-templates-post-update-content-block",
+        "endpoints-templates-post-create-email-content-block",
+        "endpoints-templates-get-content-blocks-info",
+        "endpoints-templates-get-list-email-content-blocks"
+      ]
+    },
+    "architect-auth-scim": {
+      "role": "braze-architect",
+      "summary": "Manages SDK authentication keys and automates dashboard user provisioning through SCIM endpoints.",
+      "topics": [
+        "endpoints-sdk-auth-put-primary-key",
+        "endpoints-sdk-auth-post-create-key",
+        "endpoints-sdk-auth-get-keys",
+        "endpoints-sdk-auth-delete-key",
+        "endpoints-scim-put-update-user",
+        "endpoints-scim-post-create-user",
+        "endpoints-scim-get-user-info",
+        "endpoints-scim-get-search-dashboard-user",
+        "endpoints-scim-delete-dashboard-user",
+        "api-objects-scim-api-appendix"
+      ]
+    },
+    "analyst-user-tracking": {
+      "role": "braze-analyst",
+      "summary": "Configures session tracking, custom events, purchase logging, user attributes, location tracking, and uninstall detection on iOS.",
+      "topics": [
+        "ios-analytics-tracking-sessions",
+        "ios-analytics-tracking-custom-events",
+        "ios-analytics-setting-user-ids",
+        "ios-analytics-setting-custom-attributes",
+        "ios-analytics-logging-purchases",
+        "ios-analytics-location-tracking",
+        "ios-analytics-uninstall-tracking",
+        "ios-analytics-disabling-tracking",
+        "ios-analytics"
+      ]
+    },
+    "analyst-data-objects": {
+      "role": "braze-analyst",
+      "summary": "Defines the structure of API request/response objects including user attributes, events, purchases, messaging payloads, audiences, and scheduling.",
+      "topics": [
+        "api-objects-user-attributes-object",
+        "api-objects-user-alias-object",
+        "api-objects-trigger-properties-object",
+        "api-objects-schedule-object",
+        "api-objects-recipient-object",
+        "api-objects-purchase-object",
+        "api-objects-messaging",
+        "api-objects-event-object",
+        "api-objects-context-object",
+        "api-objects-connected-audience",
+        "api-objects-catalog-selection-object",
+        "api-objects-aliases-to-identify",
+        "api-objects-messaging-whatsapp",
+        "api-objects-messaging-webhook"
+      ]
+    },
+    "strategist-translations": {
+      "role": "braze-strategist",
+      "summary": "Manages translations across campaigns, canvases, email templates, and content blocks for multi-language messaging.",
+      "topics": [
+        "endpoints-translations-email-templates",
+        "endpoints-translations-content-blocks",
+        "endpoints-translations-canvas",
+        "endpoints-translations-campaigns",
+        "endpoints-translations-put-update-template",
+        "endpoints-translations-get-view-translation-template",
+        "endpoints-translations-get-view-translation-locale-template",
+        "endpoints-translations-get-view-source-template",
+        "endpoints-translations-put-update-translation-campaign",
+        "endpoints-translations-get-translation-campaign",
+        "endpoints-translations-get-source-campaign",
+        "endpoints-translations-put-update-translation-content-block",
+        "endpoints-translations-get-translation-content-block",
+        "endpoints-translations-put-update-translation-canvas",
+        "endpoints-translations-get-translation-canvas",
+        "ios-advanced-localization"
+      ]
+    },
+    "strategist-subscriptions": {
+      "role": "braze-strategist",
+      "summary": "Manages subscription group status, user preferences, and preference center configuration for opt-in/opt-out compliance.",
+      "topics": [
+        "endpoints-subscription-groups-post-update-v2",
+        "endpoints-subscription-groups-post-update",
+        "endpoints-subscription-groups-get-list",
+        "endpoints-subscription-groups-get-status",
+        "endpoints-preference-center-put-update",
+        "endpoints-preference-center-post-create",
+        "endpoints-preference-center-get-view-details",
+        "endpoints-preference-center-get-list",
+        "endpoints-preference-center-get-create-url"
+      ]
+    },
+    "engineer-email-api": {
+      "role": "braze-engineer",
+      "summary": "Implements email endpoint operations including spam removal, bounce management, blocklisting, and subscription status.",
+      "topics": [
+        "email-post-remove-spam",
+        "email-post-remove-hard-bounces",
+        "email-post-email-subscription-status",
+        "email-post-blocklist",
+        "email-post-blacklist",
+        "email-get-query-unsubscribed-email-addresses",
+        "email-get-query-by-email-or-phone",
+        "email-get-list-hard-bounces",
+        "email-delete-remove-subscription-state",
+        "endpoints-email"
+      ]
+    },
+    "engineer-catalog-api": {
+      "role": "braze-engineer",
+      "summary": "Implements catalog CRUD operations across synchronous and asynchronous modes for items, fields, selections, and management.",
+      "topics": [
+        "catalogs-catalog-items",
+        "catalogs-catalog-fields",
+        "catalogs-catalog-selections",
+        "catalogs-catalog-management",
+        "catalogs-items-synchronous",
+        "catalogs-items-asynchronous",
+        "catalogs-management-synchronous",
+        "catalogs-selections-asynchronous",
+        "catalogs-fields-asynchronous",
+        "catalogs-post-create-catalog-selections",
+        "catalogs-delete-catalog-selection",
+        "catalogs-post-create-catalog",
+        "catalogs-get-list-catalogs",
+        "catalogs-delete-catalog",
+        "catalogs-put-update-catalog-item",
+        "endpoints-catalogs"
+      ]
+    },
+    "engineer-export-api": {
+      "role": "braze-engineer",
+      "summary": "Implements data export endpoints for user data, segments, campaigns, canvases, and custom events.",
+      "topics": [
+        "export-user-data-post-users-segment",
+        "export-user-data-post-users-identifier",
+        "export-user-data-post-users-global-control-group",
+        "export-segments-post-cancel-export",
+        "export-segments-get-segment",
+        "export-campaigns-get-campaigns",
+        "export-campaigns-get-campaign-details",
+        "export-canvas-get-canvases",
+        "export-canvas-get-canvas-details",
+        "export-custom-events-get-custom-events",
+        "export-custom-events-get-custom-events-data",
+        "export-purchases-get-list-product-id",
+        "export-sessions-get-sessions-analytics",
+        "export-custom-attributes-get-custom-attributes",
+        "endpoints-export",
+        "export-user-data",
+        "export-sessions",
+        "export-custom-attributes"
+      ]
+    },
+    "engineer-messaging-api": {
+      "role": "braze-engineer",
+      "summary": "Implements SMS, messaging, and subscription group endpoints for multi-channel communication.",
+      "topics": [
+        "sms-post-remove-invalid-numbers",
+        "endpoints-sms",
+        "endpoints-messaging",
+        "endpoints-subscription-groups"
+      ]
+    },
+    "engineer-platform-api": {
+      "role": "braze-engineer",
+      "summary": "Implements platform-level endpoints for SDK authentication, SCIM provisioning, user data, templates, and media.",
+      "topics": [
+        "endpoints-sdk-authentication",
+        "endpoints-scim",
+        "endpoints-user-data",
+        "endpoints-templates",
+        "endpoints-translations",
+        "endpoints-media-library",
+        "endpoints-preference-center"
+      ]
+    },
+    "architect-data-integration": {
+      "role": "braze-architect",
+      "summary": "Designs CDI pipeline patterns, job synchronization flows, and integration management strategies.",
+      "topics": [
+        "cdi-post-job-sync",
+        "cdi-get-job-sync-status",
+        "cdi-get-integration-list",
+        "endpoints-cdi",
+        "endpoints-user-data"
+      ]
+    },
+    "architect-catalog-design": {
+      "role": "braze-architect",
+      "summary": "Designs catalog data models, field schemas, selection strategies, and sync/async operation trade-offs.",
+      "topics": [
+        "catalogs-catalog-management",
+        "catalogs-catalog-items",
+        "catalogs-catalog-fields",
+        "catalogs-catalog-selections",
+        "catalogs-items-synchronous",
+        "catalogs-items-asynchronous",
+        "catalogs-management-synchronous",
+        "catalogs-fields-asynchronous",
+        "catalogs-selections-asynchronous",
+        "endpoints-catalogs"
+      ]
+    },
+    "architect-api-patterns": {
+      "role": "braze-architect",
+      "summary": "Defines cross-cutting API patterns for authentication, provisioning, preference management, and content delivery.",
+      "topics": [
+        "endpoints-sdk-authentication",
+        "endpoints-scim",
+        "endpoints-preference-center",
+        "endpoints-messaging",
+        "endpoints-subscription-groups",
+        "endpoints-export"
+      ]
+    },
+    "analyst-kpi-metrics": {
+      "role": "braze-analyst",
+      "summary": "Tracks platform health KPIs including DAU, MAU, uninstalls, and new user acquisition rates.",
+      "topics": [
+        "export-kpi-get-kpi-uninstalls-date",
+        "export-kpi-get-kpi-mau-30-days",
+        "export-kpi-get-kpi-dau-date",
+        "export-kpi-get-kpi-daily-new-users-date",
+        "export-kpi",
+        "export-sessions-get-sessions-analytics",
+        "export-sessions"
+      ]
+    },
+    "analyst-segment-analytics": {
+      "role": "braze-analyst",
+      "summary": "Analyzes segment composition, custom event patterns, and user attribute distributions.",
+      "topics": [
+        "export-segments-get-segment-details",
+        "export-segments-get-segment-analytics",
+        "export-segments-get-segment",
+        "export-segments-post-cancel-export",
+        "export-custom-events-get-custom-events-data",
+        "export-custom-events-get-custom-events-analytics",
+        "export-custom-events-get-custom-events",
+        "export-custom-attributes-get-custom-attributes",
+        "export-segments",
+        "export-custom-events",
+        "export-custom-attributes"
+      ]
+    },
+    "analyst-revenue-analytics": {
+      "role": "braze-analyst",
+      "summary": "Analyzes revenue trends, purchase frequency, and product performance from transaction data.",
+      "topics": [
+        "export-purchases-get-revenue-series",
+        "export-purchases-get-number-of-purchases",
+        "export-purchases-get-list-product-id",
+        "export-purchases"
+      ]
+    },
+    "strategist-campaign-management": {
+      "role": "braze-strategist",
+      "summary": "Plans campaign launches, canvas journey designs, and multi-step engagement flows using performance data.",
+      "topics": [
+        "export-campaigns-get-campaigns",
+        "export-campaigns-get-campaign-details",
+        "export-campaigns-get-campaign-analytics",
+        "export-canvas-get-canvases",
+        "export-canvas-get-canvas-details",
+        "export-canvas-get-canvas-analytics-summary",
+        "export-campaigns",
+        "export-canvas"
+      ]
+    },
+    "strategist-audience": {
+      "role": "braze-strategist",
+      "summary": "Defines audience segments, manages content templates and translations, and curates media assets.",
+      "topics": [
+        "export-segments-get-segment",
+        "export-segments-get-segment-details",
+        "export-user-data-post-users-segment",
+        "endpoints-subscription-groups",
+        "endpoints-templates",
+        "endpoints-translations",
+        "endpoints-media-library",
+        "endpoints-user-data",
+        "export-segments"
+      ]
+    },
+    "tester-api-validation": {
+      "role": "braze-tester",
+      "summary": "Tests API endpoint behavior for email, SMS, catalog, CDI, and platform operations including error cases.",
+      "topics": [
+        "email-post-remove-spam",
+        "email-post-blocklist",
+        "email-post-blacklist",
+        "email-delete-remove-subscription-state",
+        "catalogs-post-create-catalog",
+        "catalogs-delete-catalog",
+        "catalogs-put-update-catalog-item",
+        "catalogs-post-create-catalog-selections",
+        "catalogs-delete-catalog-selection",
+        "cdi-post-job-sync",
+        "cdi-get-job-sync-status",
+        "sms-post-remove-invalid-numbers",
+        "endpoints-sdk-authentication",
+        "endpoints-scim"
+      ]
+    },
+    "tester-data-exports": {
+      "role": "braze-tester",
+      "summary": "Verifies export data completeness, format correctness, and analytics consistency across all export endpoints.",
+      "topics": [
+        "export-user-data-post-users-segment",
+        "export-user-data-post-users-identifier",
+        "export-user-data-post-users-global-control-group",
+        "export-segments-post-cancel-export",
+        "export-segments-get-segment-analytics",
+        "export-campaigns-get-send-analytics",
+        "export-campaigns-get-campaign-analytics",
+        "export-canvas-get-canvas-analytics",
+        "export-canvas-get-canvas-analytics-summary",
+        "export-kpi-get-kpi-dau-date",
+        "export-purchases-get-revenue-series",
+        "export-custom-events-get-custom-events-data",
+        "export-sessions-get-sessions-analytics",
+        "export-custom-attributes-get-custom-attributes"
+      ]
+    }
+  },
+  "roles": {
+    "braze-engineer": [
+      "engineer-push",
+      "engineer-connected-content",
+      "engineer-webhooks",
+      "engineer-messaging-channels",
+      "engineer-feature-flags",
+      "engineer-mcp-server",
+      "engineer-agents",
+      "engineer-locations",
+      "engineer-user-data",
+      "engineer-cloud-ingestion",
+      "engineer-whatsapp-setup",
+      "engineer-iam-builder",
+      "engineer-email-composition",
+      "engineer-sms-messaging",
+      "engineer-in-app-messages",
+      "engineer-canvas-flows",
+      "engineer-canvas-creation",
+      "engineer-campaign-building",
+      "engineer-api-data",
+      "engineer-partner-integration",
+      "engineer-location",
+      "engineer-localization",
+      "engineer-shopify",
+      "engineer-deeplinking",
+      "engineer-payments",
+      "engineer-channel-integrations",
+      "engineer-extension-integrations",
+      "engineer-data-connectors",
+      "engineer-sdk-integration",
+      "engineer-rest-api",
+      "engineer-push-notifications",
+      "engineer-docs-contributing",
+      "engineer-sdk-setup",
+      "engineer-platform-ios",
+      "engineer-platform-web",
+      "engineer-platform-android",
+      "engineer-api",
+      "engineer-legacy-sdks",
+      "engineer-ios-setup",
+      "engineer-in-app-messaging",
+      "engineer-content-cards",
+      "engineer-advanced-ios",
+      "engineer-email-api",
+      "engineer-catalog-api",
+      "engineer-export-api",
+      "engineer-messaging-api",
+      "engineer-platform-api"
+    ],
+    "braze-architect": [
+      "architect-platform-setup",
+      "architect-data-model",
+      "architect-channel-architecture",
+      "architect-decisioning",
+      "architect-data-pipelines",
+      "architect-messaging",
+      "architect-operator",
+      "architect-data-platform",
+      "architect-data-infrastructure",
+      "architect-admin-config",
+      "architect-access-security",
+      "architect-email-infrastructure",
+      "architect-sms-infrastructure",
+      "architect-subscription-management",
+      "architect-canvas-components",
+      "architect-templates",
+      "architect-audience-sync",
+      "architect-ai-providers",
+      "architect-message-orchestration",
+      "architect-ecommerce",
+      "architect-personalization",
+      "architect-data-warehousing",
+      "architect-data-privacy",
+      "architect-cdp-design",
+      "architect-data-connectors",
+      "architect-system-design",
+      "architect-security",
+      "architect-api-fundamentals",
+      "architect-user-data-api",
+      "architect-messaging-api",
+      "architect-templates-api",
+      "architect-auth-scim",
+      "architect-data-integration",
+      "architect-catalog-design",
+      "architect-api-patterns"
+    ],
+    "braze-analyst": [
+      "analyst-segments",
+      "analyst-reporting",
+      "analyst-testing",
+      "analyst-dashboards",
+      "analyst-tracking",
+      "analyst-queries",
+      "analyst-decisioning-analytics",
+      "analyst-data-export",
+      "analyst-currents-streaming",
+      "analyst-activation-data",
+      "analyst-campaign-analytics",
+      "analyst-email-performance",
+      "analyst-canvas-analytics",
+      "analyst-messaging-metrics",
+      "analyst-campaign-reporting",
+      "analyst-data-management",
+      "analyst-attribution",
+      "analyst-ecommerce",
+      "analyst-retargeting",
+      "analyst-analytics-platforms",
+      "analyst-business-intelligence",
+      "analyst-cohort-management",
+      "analyst-cdp-platforms",
+      "analyst-audience-management",
+      "analyst-event-tracking",
+      "analyst-user-profiling",
+      "analyst-channel-analytics",
+      "analyst-user-tracking",
+      "analyst-data-objects",
+      "analyst-kpi-metrics",
+      "analyst-segment-analytics",
+      "analyst-revenue-analytics"
+    ],
+    "braze-strategist": [
+      "strategist-personalization",
+      "strategist-messaging",
+      "strategist-content",
+      "strategist-campaigns",
+      "strategist-ai-optimization",
+      "strategist-predictions",
+      "strategist-recommendations",
+      "strategist-ai-suite",
+      "strategist-whatsapp-campaigns",
+      "strategist-iam-campaigns",
+      "strategist-catalog-strategy",
+      "strategist-email-optimization",
+      "strategist-canvas-design",
+      "strategist-in-app-engagement",
+      "strategist-canvas-planning",
+      "strategist-campaign-strategy",
+      "strategist-partner-ecosystem",
+      "strategist-loyalty",
+      "strategist-channel-strategy",
+      "strategist-loyalty-programs",
+      "strategist-lead-generation",
+      "strategist-dynamic-content",
+      "strategist-visual-content",
+      "strategist-in-app-messaging",
+      "strategist-content-delivery",
+      "strategist-feature-flags",
+      "strategist-banners",
+      "strategist-translations",
+      "strategist-subscriptions",
+      "strategist-campaign-management",
+      "strategist-audience"
+    ],
+    "braze-tester": [
+      "tester-channel-qa",
+      "tester-troubleshooting",
+      "tester-experiments",
+      "tester-quality",
+      "tester-whatsapp-qa",
+      "tester-platform-validation",
+      "tester-email-qa",
+      "tester-messaging-qa",
+      "tester-canvas-qa",
+      "tester-canvas-testing",
+      "tester-campaign-testing",
+      "tester-integrations",
+      "tester-ecommerce",
+      "tester-experimentation",
+      "tester-content-optimization",
+      "tester-debugging",
+      "tester-push-validation",
+      "tester-messaging-validation",
+      "tester-sdk-validation",
+      "tester-api-validation",
+      "tester-data-exports"
+    ]
+  }
+}
