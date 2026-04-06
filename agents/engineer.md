@@ -1,5 +1,5 @@
 ---
-name: braze-engineer
+name: engineer
 description: >-
   Technical implementation specialist for messaging channels, SDK integration,
   Connected Content APIs, and webhook configuration.. Use when the task

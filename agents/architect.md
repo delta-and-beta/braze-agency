@@ -1,5 +1,5 @@
 ---
-name: braze-architect
+name: architect
 description: >-
   Platform architecture specialist responsible for workspace design, data
   modeling, channel topology, and system-level integration planning.. Use when

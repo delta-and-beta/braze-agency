@@ -1,5 +1,5 @@
 ---
-name: braze-analyst
+name: analyst
 description: >-
   Data and segmentation specialist focused on audience targeting, cross-channel
   reporting, and experimentation analytics.. Use when the task involves:

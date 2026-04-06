@@ -1,5 +1,5 @@
 ---
-name: braze-presenter
+name: presenter
 description: >-
   Transforms content into beautifully formatted output with flowcharts and
   visual elements

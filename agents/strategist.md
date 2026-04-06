@@ -1,5 +1,5 @@
 ---
-name: braze-strategist
+name: strategist
 description: >-
   Campaign and content strategist owning personalization, messaging
   fundamentals, content card design, and landing page optimization.. Use when

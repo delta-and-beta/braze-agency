@@ -1,5 +1,5 @@
 ---
-name: braze-tester
+name: tester
 description: >-
   Quality assurance specialist for cross-channel message testing, delivery
   validation, and systematic troubleshooting of push, content, and webhook

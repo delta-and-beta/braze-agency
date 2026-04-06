@@ -1,5 +1,5 @@
 ---
-name: braze-consultant
+name: consultant
 description: >-
   Synthesizes multiple role perspectives into coherent answers with big picture
   and details

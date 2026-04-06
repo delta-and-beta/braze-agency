@@ -1,5 +1,5 @@
 ---
-name: braze-validator
+name: validator
 description: Checks facts against documentation
 model: inherit
 tools:

@@ -1,5 +1,5 @@
 ---
-name: braze-researcher
+name: researcher
 description: Fetches and reads documentation for roles
 model: inherit
 tools:
