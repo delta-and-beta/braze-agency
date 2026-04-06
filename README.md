@@ -5,7 +5,9 @@ Braze platform specialist agency for Claude Code. 9 AI agents backed by 166 skil
 ## Quick Start
 
 ```bash
-npm install @anthropic-apps/braze-agency
+git clone https://github.com/delta-and-beta/braze-agency.git
+cd braze-agency
+npm install
 npx braze-agency install
 ```
 
@@ -17,15 +19,29 @@ Restart Claude Code. The agents appear automatically and respond to Braze-relate
 
 | Agent | Expertise | Model |
 |-------|-----------|-------|
-| `braze-engineer` | SDK, API, push, webhooks, Connected Content | opus |
-| `braze-architect` | Data models, infrastructure, security, CDI | opus |
-| `braze-strategist` | Campaigns, Canvas journeys, personalization | opus |
-| `braze-analyst` | Analytics, segments, A/B testing, attribution | opus |
-| `braze-tester` | QA, troubleshooting, delivery validation | opus |
-| `braze-researcher` | Documentation lookup | haiku |
-| `braze-validator` | Fact-checking against docs | haiku |
-| `braze-consultant` | Cross-domain synthesis | opus |
-| `braze-presenter` | Formatted output with visuals | sonnet |
+| `braze-engineer` | SDK, API, push, webhooks, Connected Content | inherit |
+| `braze-architect` | Data models, infrastructure, security, CDI | inherit |
+| `braze-strategist` | Campaigns, Canvas journeys, personalization | inherit |
+| `braze-analyst` | Analytics, segments, A/B testing, attribution | inherit |
+| `braze-tester` | QA, troubleshooting, delivery validation | inherit |
+| `braze-researcher` | Documentation lookup | inherit |
+| `braze-validator` | Fact-checking against docs | inherit |
+| `braze-consultant` | Cross-domain synthesis | inherit |
+| `braze-presenter` | Formatted output with visuals | inherit |
+
+All agents default to `model: inherit` — they use whatever model your conversation is running. Works on any Claude plan (Pro, Max, Teams).
+
+### Model Override
+
+Force a specific model at install time:
+
+```bash
+npx braze-agency install                  # inherit (follows your active model)
+npx braze-agency install --model opus     # force opus (Pro/Max plans)
+npx braze-agency install --model sonnet   # force sonnet (all plans)
+```
+
+To switch models later, just re-run the install command with a different `--model` flag.
 
 ### Semantic Search (MCP)
 
@@ -55,19 +71,36 @@ npx braze-agency status     # Check installation
 3. Claude Code auto-discovers the agents and dispatches based on query content
 4. Agents search the knowledge base via MCP to ground responses in Braze documentation
 
+## Multi-Agent Teams
+
+For complex queries, spawn a team of agents that collaborate:
+
+```
+TeamCreate(team_name: "migration-plan")
+
+Agent(subagent_type: "braze-architect", team_name: "migration-plan", name: "architect")
+Agent(subagent_type: "braze-engineer",  team_name: "migration-plan", name: "engineer")
+Agent(subagent_type: "braze-analyst",   team_name: "migration-plan", name: "analyst")
+```
+
+Each agent searches the knowledge base independently, then findings are synthesized by the team lead.
+
 ## Cross-Agency Collaboration
 
 Install multiple agencies to enable cross-platform expertise:
 
 ```bash
-npm install @anthropic-apps/braze-agency
-npm install @anthropic-apps/marketo-agency  # hypothetical
-
 npx braze-agency install
-npx marketo-agency install
+npx marketo-agency install   # hypothetical
 ```
 
-Ask Claude: *"Help me migrate from Marketo to Braze"* — it will dispatch both braze and marketo agents, each searching their own knowledge base.
+Ask Claude: *"Help me migrate from Marketo to Braze"* — it dispatches both braze and marketo agents, each searching their own knowledge base.
+
+## Uninstall
+
+```bash
+npx braze-agency uninstall
+```
 
 ## Built With
 
