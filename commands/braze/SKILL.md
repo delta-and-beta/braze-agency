@@ -1,65 +1,41 @@
 ---
 name: braze
-description: "Braze platform specialist agency — search knowledge base, dispatch to specialist agents, and answer Braze-related questions."
+description: "Braze platform specialist agency — routes all questions through the consultant orchestrator who assembles the right team of specialists."
 ---
 
 # Braze Agency
 
-You have access to a Braze knowledge base with 166 skills and 1,304 topic references. Use the CLI search tool to find relevant content, then answer or dispatch to a specialist agent.
+**Always dispatch to the consultant first.** The consultant analyzes the question, decides which specialists are needed, and orchestrates the team.
 
-## Search the Knowledge Base
+```
+Agent(subagent_type: "braze:consultant", prompt: "<the user's full question>")
+```
 
-Use Bash to search:
+The consultant will:
+1. Search the knowledge base for context
+2. Reason about which domains the question touches
+3. For simple questions (1 domain): dispatch to a single specialist
+4. For complex questions (2+ domains): create a team via TeamCreate and fan out to multiple specialists in parallel
+5. Synthesize all findings into a unified answer
+
+## Available Specialists (managed by the consultant)
+
+| Agent | Domain |
+|-------|--------|
+| `braze:architect` | Data models, API design, infrastructure, workspace config |
+| `braze:engineer` | SDK, API integration, push, webhooks, Connected Content |
+| `braze:strategist` | Campaigns, Canvas journeys, personalization, content |
+| `braze:analyst` | Segments, analytics, attribution, Currents, reporting |
+| `braze:tester` | QA, delivery validation, troubleshooting |
+| `braze:researcher` | Documentation lookup |
+| `braze:validator` | Fact-checking against docs |
+| `braze:presenter` | Report formatting, visual artifacts |
+
+## Search (for quick lookups before dispatching)
 
 ```bash
-# Search skills (high-level domains)
-node ~/.braze-agency/bin/search.mjs "query" --limit 5
-
-# Search topics (detailed references)
-node ~/.braze-agency/bin/search.mjs "query" --topic --limit 5
-
-# Read a specific topic
-node ~/.braze-agency/bin/search.mjs --get-topic <topic-id>
-
-# List all skills
-node ~/.braze-agency/bin/search.mjs --list-skills
-```
-
-## Workflow
-
-1. **Search** — find relevant skills/topics for the user's question
-2. **Read** — get the full topic content for implementation details
-3. **Answer** — provide a grounded response, or dispatch to a specialist agent
-
-## Specialist Agents
-
-For complex questions, dispatch to a specialist:
-
-| Agent | Use When |
-|-------|----------|
-| `braze-engineer` | SDK setup, API integration, push notifications, webhooks, Connected Content |
-| `braze-architect` | Data models, CDI pipelines, infrastructure, security, email authentication |
-| `braze-strategist` | Campaign design, Canvas journeys, personalization, A/B testing, lead scoring |
-| `braze-analyst` | Analytics, segments, attribution, Currents, reporting dashboards |
-| `braze-tester` | QA, troubleshooting, delivery validation, testing procedures |
-
-Dispatch example:
-```
-Agent(subagent_type: "braze-engineer", prompt: "How to set up push notifications on iOS?")
-```
-
-For multi-domain questions, spawn a team:
-```
-TeamCreate(team_name: "braze-project")
-Agent(subagent_type: "braze-architect", team_name: "braze-project", name: "architect")
-Agent(subagent_type: "braze-engineer", team_name: "braze-project", name: "engineer")
-```
-
-## Quick Reference
-
-```
-/braze <question>                    # Search + answer
-/braze how to set up push           # Auto-searches, reads topics, answers
-/braze compare Canvas vs campaigns  # Dispatches to strategist
-/braze design a migration plan      # Spawns architect + engineer team
+braze-agency search "query" --limit 5
+braze-agency search "query" --topic --limit 5
+braze-agency search --get-topic <topic-id>
+braze-agency search --list-skills
 ```
