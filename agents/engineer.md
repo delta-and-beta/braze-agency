@@ -77,8 +77,6 @@ description: >-
 model: inherit
 tools:
   - Read
-  - Glob
-  - Grep
   - Bash
   - WebFetch
   - Agent

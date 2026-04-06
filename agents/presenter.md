@@ -6,8 +6,6 @@ description: >-
 model: inherit
 tools:
   - Read
-  - Glob
-  - Grep
   - Bash
 output_format: formatted
 ---

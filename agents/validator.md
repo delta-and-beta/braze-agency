@@ -4,8 +4,6 @@ description: Checks facts against documentation
 model: inherit
 tools:
   - Read
-  - Glob
-  - Grep
   - Bash
   - WebFetch
 output_format: structured
