@@ -136,9 +136,22 @@ Count the domains the question touches:
 - "Migrate from legacy SDK to new one" → architect + engineer + tester + analyst
 - "Launch multi-channel campaign from scratch" → all 5 specialists
 
-## Synthesis Output Format
+## Step 5: Present Results
 
-After collecting team results, deliver:
+After synthesizing findings, **always ask the user** how they want the output:
+
+```
+AskUserQuestion:
+  Question: "How would you like the results?"
+  Options:
+    - "Print" / "Display in terminal (default)"
+    - "Slides" / "Generate a Marp presentation (.md → PDF/HTML slides)"
+    - "Web Artifact" / "Save as a multi-tab HTML report"
+```
+
+### Option A: Print (default)
+
+Output directly in terminal:
 
 ```
 ## Summary
@@ -146,28 +159,46 @@ After collecting team results, deliver:
 
 ## Recommendations
 1. [Primary recommendation with rationale]
-2. [Secondary recommendation]
-...
+2. ...
 
 ## Details by Domain
-### Architecture
-[Architect's findings]
-
-### Implementation
-[Engineer's findings]
-
-### Strategy
-[Strategist's findings]
-
-### Tracking & Analytics
-[Analyst's findings]
-
-### QA & Validation
-[Tester's findings]
+[Organized findings from each specialist]
 
 ## Next Steps
 [Prioritized action items]
 ```
+
+### Option B: Marp Slides
+
+Generate a Marp-compatible markdown file and convert to HTML slides:
+
+1. Write `./braze-presentation.md` with Marp frontmatter:
+   ```markdown
+   ---
+   marp: true
+   theme: default
+   paginate: true
+   header: "Braze Agency"
+   ---
+   # Title Slide
+   ---
+   # Key Recommendations
+   ---
+   # Details
+   ```
+
+2. Convert: `marp ./braze-presentation.md --html --output ./braze-presentation.html`
+
+3. If `marp` not installed: `brew install marp-cli`
+
+### Option C: Web Artifact
+
+Write a self-contained HTML file:
+
+1. Write to `./braze-report.html`
+2. Tabs: Summary | Recommendations | Details | Next Steps
+3. Inline CSS, print-friendly, no external dependencies
+4. Contributing agents credited in Sources footer
 
 ## Learned Knowledge Integration
 
@@ -179,12 +210,11 @@ braze-agency search "<user query>" --limit 3
 
 If relevant prior knowledge exists, include it as context in each agent's sub-prompt to avoid re-discovering known patterns.
 
-After synthesis, if the discussion produced novel insights worth remembering, use the `learn` MCP tool to capture them.
-
 ## Constraints
 
-- **ALWAYS search first** before deciding complexity — the search results inform which domains are relevant
-- **NEVER skip TeamCreate for complex questions** — the user explicitly wants team orchestration
-- **NEVER limit agents artificially** — spawn as many as the question demands
-- **ALWAYS give each agent a focused sub-prompt** — don't paste the full user query to every agent
-- **ALWAYS synthesize** — don't just concatenate agent outputs, provide a unified perspective
+- **ALWAYS search first** before deciding complexity
+- **NEVER skip TeamCreate for complex questions**
+- **NEVER limit agents artificially** — spawn as many as needed
+- **ALWAYS give each agent a focused sub-prompt**
+- **ALWAYS synthesize** — don't just concatenate agent outputs
+- **ALWAYS ask for output format** after synthesis is ready
