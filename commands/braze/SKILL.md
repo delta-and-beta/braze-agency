@@ -115,3 +115,31 @@ AskUserQuestion:
 - **ALWAYS ask for output format** (Step 6) — Print / Slides / Web Artifact
 - **Feed agents context** — include search results, topic IDs, and brainstorm insights in every agent prompt
 - **Agents must use `braze-agency search`** — tell them explicitly in their prompt
+- **ALWAYS show retrospective** (Step 7) — execution stats after presenting results
+
+## Step 7: Retrospective
+
+After presenting results, ALWAYS output an execution summary block:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Braze Agency — Execution Retrospective
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Step 1: Search          ██  ~Xs   (N queries, M topics found)
+  Step 2: Brainstorm      ██  ~Xs   (N dimensions identified)
+  Step 3: Plan            ██  ~Xs   (N agent assignments created)
+  Step 4: Dispatch        ██  ~Xs   (N agents spawned via TeamCreate)
+  Step 5: Synthesize      ██  ~Xs   (N agent reports merged)
+  Step 6: Present         ██  ~Xs   (format: Print|Slides|Web)
+  ─────────────────────────────────────────────────
+  Total wall time:        ~Xs
+  Agents spawned:         N
+  Search queries:         N
+  Topics referenced:      N
+  Output format:          Print | Slides | Web Artifact
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+Track timing by noting the approximate duration of each step. Count agents from the TeamCreate dispatch. Count search queries and topics from Step 1 and agent sub-searches.
