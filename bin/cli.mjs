@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { existsSync, mkdirSync, symlinkSync, readdirSync, rmSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, statSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
@@ -9,172 +9,174 @@ import { execFileSync } from 'node:child_process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = join(__dirname, '..');
 const AGENCY_NAME = 'braze';
-const CLAUDE_AGENTS_DIR = join(homedir(), '.claude', 'agents');
-const CLAUDE_COMMANDS_DIR = join(homedir(), '.claude', 'commands');
+const SETTINGS_PATH = join(homedir(), '.claude', 'settings.json');
 
-const command = process.argv[2] || 'install';
+const command = process.argv[2] || 'register';
 const flags = process.argv.slice(3);
 
 switch (command) {
-  case 'install':
-    install();
+  case 'register':
+    register();
     break;
-  case 'uninstall':
-    uninstall();
+  case 'unregister':
+    unregister();
     break;
   case 'status':
     status();
     break;
+  case 'search':
+    execFileSync('node', [join(__dirname, 'search.mjs'), ...flags], { stdio: 'inherit' });
+    break;
+  case 'learn':
+    execFileSync('node', [join(__dirname, 'learned.mjs'), 'save', ...flags], { stdio: 'inherit' });
+    break;
+  case 'recall':
+    execFileSync('node', [join(__dirname, 'learned.mjs'), 'search', ...flags], { stdio: 'inherit' });
+    break;
+  case 'learned':
+    execFileSync('node', [join(__dirname, 'learned.mjs'), 'list', ...flags], { stdio: 'inherit' });
+    break;
   default:
     console.log(`
-braze-agency — Braze platform specialist agents for Claude Code
+${AGENCY_NAME}-agency — Braze specialist agents for Claude Code
 
 Commands:
-  install     Install agents, search CLI, and /${AGENCY_NAME} skill
-  uninstall   Remove agents and skill
-  status      Show installation status
-
-Options:
-  --model <model>   Set agent model: opus, sonnet, haiku, inherit (default: inherit)
+  register    Register plugin with Claude Code
+  unregister  Remove plugin from Claude Code
+  status      Show registration and content status
+  search      Search the knowledge base
+  learn       Save a learned insight (query + synthesis)
+  recall      Search prior learnings for a query
+  learned     List all learned insights
 
 Usage:
-  npx braze-agency install
-  npx braze-agency install --model opus
-  npx braze-agency uninstall
-  npx braze-agency status
+  ${AGENCY_NAME}-agency search "your query"
+  ${AGENCY_NAME}-agency search "query" --topic --limit 10
+  ${AGENCY_NAME}-agency learn --query "question" --synthesis "findings" --distilled "one-liner"
+  ${AGENCY_NAME}-agency recall "query"
+  ${AGENCY_NAME}-agency learned
+
+Install via Homebrew:
+  brew install ${AGENCY_NAME}-agency    # installs + registers automatically
+  brew uninstall ${AGENCY_NAME}-agency  # removes + unregisters
 `);
 }
 
-function getModelFlag() {
-  const idx = flags.indexOf('--model');
-  if (idx !== -1 && flags[idx + 1]) {
-    const model = flags[idx + 1];
-    if (['opus', 'sonnet', 'haiku', 'inherit'].includes(model)) return model;
-    console.error(`Invalid model: ${model}. Use opus, sonnet, haiku, or inherit.`);
-    process.exit(1);
+function readSettings() {
+  if (!existsSync(SETTINGS_PATH)) return {};
+  try {
+    return JSON.parse(readFileSync(SETTINGS_PATH, 'utf-8'));
+  } catch {
+    return {};
   }
-  return null;
 }
 
-function resolveModel() {
-  return getModelFlag() || 'inherit';
+function writeSettings(settings) {
+  mkdirSync(dirname(SETTINGS_PATH), { recursive: true });
+  writeFileSync(SETTINGS_PATH, JSON.stringify(settings, null, 2) + '\n');
 }
 
-function install() {
-  const model = resolveModel();
-  console.log('Installing braze-agency...\n');
-  console.log(`  Model: ${model === 'inherit' ? 'inherit (follows your active model)' : model}`);
+function register() {
+  console.log(`Registering ${AGENCY_NAME}-agency with Claude Code...\n`);
 
-  // Step 1: Install agents to ~/.claude/agents/
-  mkdirSync(CLAUDE_AGENTS_DIR, { recursive: true });
-  const agentsDir = join(PACKAGE_ROOT, 'agents');
-  const agents = readdirSync(agentsDir).filter(f => f.endsWith('.md'));
-
-  for (const file of agents) {
-    const linkPath = join(CLAUDE_AGENTS_DIR, `${AGENCY_NAME}-${file}`);
-    const sourcePath = join(agentsDir, file);
-
-    if (model !== 'inherit') {
-      let content = readFileSync(sourcePath, 'utf-8');
-      content = content.replace(/^model: .+$/m, `model: ${model}`);
-      if (existsSync(linkPath)) rmSync(linkPath, { force: true });
-      writeFileSync(linkPath, content);
+  // Use claude CLI to register via marketplace (proper agent + skill + command discovery)
+  try {
+    execFileSync('claude', ['plugin', 'marketplace', 'add', PACKAGE_ROOT], { stdio: 'pipe' });
+    console.log(`  ✓ Marketplace added`);
+  } catch (e) {
+    // Already added or claude not available
+    if (String(e).includes('already')) {
+      console.log(`  ✓ Marketplace already added`);
     } else {
-      if (existsSync(linkPath)) rmSync(linkPath, { force: true });
-      symlinkSync(sourcePath, linkPath);
+      console.error(`  ✗ Failed to add marketplace (is claude CLI installed?)`);
+      console.error(`    Run manually: claude plugin marketplace add ${PACKAGE_ROOT}`);
     }
   }
-  console.log(`  ✓ ${agents.length} agents installed`);
 
-  // Step 2: Symlink /{name} skill to ~/.claude/commands/
-  const commandSource = join(PACKAGE_ROOT, 'commands', AGENCY_NAME);
-  if (existsSync(commandSource)) {
-    mkdirSync(CLAUDE_COMMANDS_DIR, { recursive: true });
-    const commandLink = join(CLAUDE_COMMANDS_DIR, AGENCY_NAME);
-    if (existsSync(commandLink)) rmSync(commandLink, { recursive: true, force: true });
-    symlinkSync(commandSource, commandLink);
-    console.log(`  ✓ /${AGENCY_NAME} skill installed`);
-  }
-
-  // Step 3: Remove old MCP server if registered (migration from MCP to CLI)
   try {
-    execFileSync('claude', ['mcp', 'remove', `${AGENCY_NAME}-agency`], { stdio: 'pipe' });
-    console.log(`  ✓ Removed old MCP server (replaced by CLI search)`);
-  } catch {
-    // Not registered — that's fine
+    execFileSync('claude', ['plugin', 'install', `${AGENCY_NAME}@${AGENCY_NAME}-agency`], { stdio: 'pipe' });
+    console.log(`  ✓ Plugin installed`);
+  } catch (e) {
+    if (String(e).includes('already')) {
+      console.log(`  ✓ Plugin already installed`);
+    } else {
+      console.error(`  ✗ Failed to install plugin`);
+      console.error(`    Run manually: claude plugin install ${AGENCY_NAME}@${AGENCY_NAME}-agency`);
+    }
   }
+
+  // Count what's available
+  const agentsDir = join(PACKAGE_ROOT, 'agents');
+  const agents = existsSync(agentsDir)
+    ? readdirSync(agentsDir).filter(f => f.endsWith('.md'))
+    : [];
 
   console.log(`
-✓ braze-agency installed!
+✓ ${AGENCY_NAME}-agency registered!
 
-  Agents:  ${agents.map(f => AGENCY_NAME + '-' + f.replace('.md', '')).join(', ')}
-  Skill:   /${AGENCY_NAME} (search + dispatch)
-  Search:  node ${join(PACKAGE_ROOT, 'bin', 'search.mjs')} "query"
-  Model:   ${model === 'inherit' ? 'inherit (uses your active model)' : model}
+  Plugin:  ${PACKAGE_ROOT}
+  Agents:  ${agents.length}
+  Skill:   /${AGENCY_NAME}
+  Search:  ${AGENCY_NAME}-agency search "query"
 
   Restart Claude Code to activate.
 `);
 }
 
-function uninstall() {
-  console.log('Uninstalling braze-agency...\n');
+function unregister() {
+  console.log(`Unregistering ${AGENCY_NAME}-agency from Claude Code...\n`);
 
-  // Remove agents
-  if (existsSync(CLAUDE_AGENTS_DIR)) {
-    const files = readdirSync(CLAUDE_AGENTS_DIR)
-      .filter(f => f.startsWith(`${AGENCY_NAME}-`) && f.endsWith('.md'));
-    for (const file of files) {
-      rmSync(join(CLAUDE_AGENTS_DIR, file), { force: true });
+  const settings = readSettings();
+  if (settings.plugins) {
+    const before = settings.plugins.length;
+    settings.plugins = settings.plugins.filter(p => p !== PACKAGE_ROOT);
+    if (settings.plugins.length < before) {
+      writeSettings(settings);
+      console.log(`  ✓ Removed from ${SETTINGS_PATH}`);
+    } else {
+      console.log(`  ✓ Not registered (nothing to remove)`);
     }
-    console.log(`  ✓ ${files.length} agents removed`);
+  } else {
+    console.log(`  ✓ Not registered (nothing to remove)`);
   }
 
-  // Remove skill
-  const commandLink = join(CLAUDE_COMMANDS_DIR, AGENCY_NAME);
-  if (existsSync(commandLink)) {
-    rmSync(commandLink, { recursive: true, force: true });
-    console.log(`  ✓ /${AGENCY_NAME} skill removed`);
-  }
-
-  // Remove MCP if still registered
-  try {
-    execFileSync('claude', ['mcp', 'remove', `${AGENCY_NAME}-agency`], { stdio: 'pipe' });
-    console.log(`  ✓ MCP server removed`);
-  } catch { /* not registered */ }
-
-  console.log('\n✓ braze-agency uninstalled.');
+  console.log(`\n✓ ${AGENCY_NAME}-agency unregistered.`);
 }
 
 function status() {
-  console.log('braze-agency status:\n');
+  console.log(`${AGENCY_NAME}-agency status:\n`);
+
+  // Registration
+  const settings = readSettings();
+  const isRegistered = (settings.plugins || []).includes(PACKAGE_ROOT);
+  console.log('  Registered: ' + (isRegistered ? '✓ yes' : '✗ no (run: ' + AGENCY_NAME + '-agency register)'));
+  console.log(`  Plugin:     ${PACKAGE_ROOT}`);
 
   // Agents
-  const linkedAgents = existsSync(CLAUDE_AGENTS_DIR)
-    ? readdirSync(CLAUDE_AGENTS_DIR).filter(f => f.startsWith(`${AGENCY_NAME}-`))
+  const agentsDir = join(PACKAGE_ROOT, 'agents');
+  const agents = existsSync(agentsDir)
+    ? readdirSync(agentsDir).filter(f => f.endsWith('.md'))
     : [];
-  console.log(`  Agents:  ${linkedAgents.length} installed`);
-  if (linkedAgents.length > 0) {
-    const first = join(CLAUDE_AGENTS_DIR, linkedAgents[0]);
-    try {
-      const content = readFileSync(first, 'utf-8');
-      const modelMatch = content.match(/^model: (.+)$/m);
-      if (modelMatch) console.log(`  Model:   ${modelMatch[1]}`);
-    } catch { /* broken symlink */ }
-  }
-  for (const a of linkedAgents) console.log(`    ✓ ${a.replace('.md', '')}`);
+  console.log(`  Agents:     ${agents.length}`);
+  for (const a of agents) console.log(`    ✓ ${AGENCY_NAME}:${a.replace('.md', '')}`);
 
-  // Skill
-  const hasSkill = existsSync(join(CLAUDE_COMMANDS_DIR, AGENCY_NAME));
-  console.log(`  Skill:   ${hasSkill ? `✓ /${AGENCY_NAME}` : '✗ not installed'}`);
+  // Skills
+  const skillsDir = join(PACKAGE_ROOT, 'skills');
+  const skillCount = existsSync(skillsDir)
+    ? readdirSync(skillsDir).filter(d => existsSync(join(skillsDir, d, 'SKILL.md'))).length
+    : 0;
+  console.log(`  Skills:     ${skillCount}`);
 
   // Search
-  const searchPath = join(PACKAGE_ROOT, 'bin', 'search.mjs');
-  console.log(`  Search:  ${existsSync(searchPath) ? '✓ CLI' : '✗ missing'}`);
+  const searchPath = join(__dirname, 'search.mjs');
+  console.log(`  Search:     ${existsSync(searchPath) ? '✓ CLI' : '✗ missing'}`);
 
-  // Knowledge
+  // Memory
   const memoryPath = join(PACKAGE_ROOT, 'memory.db');
-  console.log(`  Memory:  ${existsSync(memoryPath) ? '✓ ' + Math.round(require('fs').statSync(memoryPath).size / 1024 / 1024) + 'MB' : '✗ missing'}`);
-  const skillsDir = join(PACKAGE_ROOT, 'skills');
-  const skillCount = existsSync(skillsDir) ? readdirSync(skillsDir).length : 0;
-  console.log(`  Skills:  ${skillCount}`);
+  if (existsSync(memoryPath)) {
+    const size = Math.round(statSync(memoryPath).size / 1024 / 1024);
+    console.log(`  Memory:     ✓ ${size}MB`);
+  } else {
+    console.log(`  Memory:     ✗ missing`);
+  }
 }

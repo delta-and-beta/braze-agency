@@ -47,26 +47,25 @@ if (!existsSync(DB_PATH)) {
 const db = new Database(DB_PATH);
 
 // Ensure learned tables exist
-db.exec(\`
-  CREATE TABLE IF NOT EXISTS learned (
-    id TEXT PRIMARY KEY,
-    query TEXT NOT NULL,
-    synthesis TEXT NOT NULL,
-    distilled TEXT NOT NULL,
-    agents TEXT DEFAULT '',
-    learned_at TEXT NOT NULL
-  );
-\`);
+db.exec([
+  'CREATE TABLE IF NOT EXISTS learned (',
+  '  id TEXT PRIMARY KEY,',
+  '  query TEXT NOT NULL,',
+  '  synthesis TEXT NOT NULL,',
+  '  distilled TEXT NOT NULL,',
+  "  agents TEXT DEFAULT '',",
+  '  learned_at TEXT NOT NULL',
+  ')',
+].join('\n'));
 
-// FTS5 virtual tables cannot use IF NOT EXISTS, check first
 const hasFts = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='learned_fts'").get();
 if (!hasFts) {
-  db.exec(\`
-    CREATE VIRTUAL TABLE learned_fts USING fts5(
-      id, query, synthesis, distilled,
-      tokenize='porter unicode61'
-    );
-  \`);
+  db.exec([
+    'CREATE VIRTUAL TABLE learned_fts USING fts5(',
+    '  id, query, synthesis, distilled,',
+    "  tokenize='porter unicode61'",
+    ')',
+  ].join('\n'));
 }
 
 if (subcommand === 'save') {
@@ -76,10 +75,7 @@ if (subcommand === 'save') {
 } else if (subcommand === 'list') {
   listLearned(parseInt(flags.limit) || 20);
 } else {
-  console.log(\`Usage:
-  learned.mjs save --query "..." --synthesis "..." --distilled "..."
-  learned.mjs search "query" [--limit 5]
-  learned.mjs list [--limit 20]\`);
+  console.log('Usage:\n  learned.mjs save --query "..." --synthesis "..." --distilled "..."\n  learned.mjs search "query" [--limit 5]\n  learned.mjs list [--limit 20]');
 }
 
 function save() {
@@ -114,15 +110,11 @@ function searchLearned(query, limit) {
   const sanitized = query.replace(/['"]/g, ' ').trim();
 
   try {
-    const results = db.prepare(\`
-      SELECT f.id, d.query, d.distilled, d.agents, d.learned_at,
-             bm25(learned_fts) AS score
-      FROM learned_fts f
-      JOIN learned d ON f.id = d.id
-      WHERE learned_fts MATCH ?
-      ORDER BY score
-      LIMIT ?
-    \`).all(sanitized, limit);
+    const results = db.prepare(
+      'SELECT f.id, d.query, d.distilled, d.agents, d.learned_at, bm25(learned_fts) AS score ' +
+      'FROM learned_fts f JOIN learned d ON f.id = d.id ' +
+      'WHERE learned_fts MATCH ? ORDER BY score LIMIT ?'
+    ).all(sanitized, limit);
 
     console.log(JSON.stringify({
       query, count: results.length,
