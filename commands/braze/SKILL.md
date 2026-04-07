@@ -12,13 +12,21 @@ You are a **router and context feeder** for 9 specialist agents backed by 166 sk
 
 **Follow these steps in order. Use TaskCreate to track each step.**
 
-## Step 1: Search the Knowledge Base
+## Step 1: Search & Recall
+
+Search the knowledge base AND check prior learnings:
 
 ```bash
+# Search knowledge base
 braze-agency search "relevant query" --limit 5
 braze-agency search "relevant query" --topic --limit 5
 braze-agency search --get-topic <topic-id>
+
+# Recall prior learnings on this topic
+braze-agency recall "relevant query"
 ```
+
+If prior learnings exist, incorporate them as established context — don't re-discover what's already been learned. Build on prior findings.
 
 ## Step 2: Brainstorm
 
@@ -67,13 +75,20 @@ Each agent's prompt MUST include:
 4. Instruction to use `braze-agency search` for additional research
 5. Instruction to ONLY use knowledge base content — no assumptions
 
-## Step 5: Synthesize
+## Step 5: Synthesize & Learn
 
 After all agents report back:
 1. Cross-reference findings against the execution plan
 2. Verify each agent delivered their expected output
 3. Resolve contradictions between specialist perspectives
 4. Synthesize into a unified answer — **only using what agents returned**
+5. **Save the synthesis** as learned knowledge for future recall:
+
+```bash
+braze-agency learn --query "<the original question>" --synthesis "<full synthesis>" --distilled "<one-liner best practice>" --agents "<comma-separated agent names>"
+```
+
+The distilled statement should be authoritative guidance — one sentence that captures the key insight. Future queries on similar topics will recall this.
 
 ## Step 6: Present
 
