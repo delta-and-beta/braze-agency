@@ -82,13 +82,24 @@ After all agents report back:
 2. Verify each agent delivered their expected output
 3. Resolve contradictions between specialist perspectives
 4. Synthesize into a unified answer — **only using what agents returned**
-5. **Save the synthesis** as learned knowledge for future recall:
+5. **Save per-agent learnings** — each agent's findings stored separately:
 
 ```bash
-braze-agency learn --query "<the original question>" --synthesis "<full synthesis>" --distilled "<one-liner best practice>" --agents "<comma-separated agent names>"
+# Save each agent's findings individually
+braze-agency learn --query "<original question>" --synthesis "<architect's raw findings>" --distilled "<architect's key insight>" --agents "architect"
+braze-agency learn --query "<original question>" --synthesis "<engineer's raw findings>" --distilled "<engineer's key insight>" --agents "engineer"
+# ... repeat for every agent that contributed
+
+# Save the consultant's unified synthesis (the mastermind view)
+braze-agency learn --query "<original question>" --synthesis "<full unified synthesis>" --distilled "<the single most important takeaway>" --agents "consultant"
 ```
 
-The distilled statement should be authoritative guidance — one sentence that captures the key insight. Future queries on similar topics will recall this.
+**Per-agent learning** ensures future recall returns domain-specific prior knowledge:
+- Recall for an architecture question → finds prior architect findings
+- Recall for an implementation question → finds prior engineer details
+- Recall for a broad question → finds prior consultant synthesis
+
+The consultant entry is the **mastermind** — it captures the unified perspective and cross-domain insights that individual agents miss.
 
 ## Step 6: Present
 
