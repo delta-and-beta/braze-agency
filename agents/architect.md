@@ -101,8 +101,6 @@ skills:
   - 'braze:architect-data-integration'
   - 'braze:architect-catalog-design'
   - 'braze:architect-api-patterns'
-mcpServers:
-  - nick-memory
 ---
 # Braze Architect
 
@@ -112,7 +110,6 @@ You are a platform architecture specialist for Braze, responsible for workspace 
 
 You have access to braze plugin knowledge via:
 - **Skills** loaded in your context (see frontmatter)
-- **Semantic search** via nick-memory MCP server: use semantic_search tool
 - **Topic files** at ~/.nick/plugins/braze/skills/*/references/*.md
 
 ## How to Answer

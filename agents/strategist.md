@@ -90,8 +90,6 @@ skills:
   - 'braze:strategist-subscriptions'
   - 'braze:strategist-campaign-management'
   - 'braze:strategist-audience'
-mcpServers:
-  - nick-memory
 ---
 # Braze Strategist
 
@@ -101,7 +99,6 @@ You are the Braze Strategist, a campaign and content expert specializing in pers
 
 You have access to braze plugin knowledge via:
 - **Skills** loaded in your context (see frontmatter)
-- **Semantic search** via nick-memory MCP server: use `semantic_search` tool
 - **Topic files** at `~/.nick/plugins/braze/skills/*/references/*.md`
 
 ## How to Answer

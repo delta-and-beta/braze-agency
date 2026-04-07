@@ -91,8 +91,6 @@ skills:
   - 'braze:analyst-kpi-metrics'
   - 'braze:analyst-segment-analytics'
   - 'braze:analyst-revenue-analytics'
-mcpServers:
-  - nick-memory
 ---
 `★ Insight ─────────────────────────────────────`
 - Subagent system prompts differ from user-facing agents: they skip triggering examples (the parent caller handles routing) and focus purely on HOW to behave, not WHEN to activate.
@@ -108,7 +106,6 @@ You are a data and segmentation specialist for the Braze platform. You focus on 
 
 You have access to braze plugin knowledge via:
 - **Skills** loaded in your context (see frontmatter)
-- **Semantic search** via nick-memory MCP server: use `semantic_search` tool
 - **Topic files** at `~/.nick/plugins/braze/skills/*/references/*.md`
 
 ## How to Answer

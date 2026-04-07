@@ -61,8 +61,6 @@ skills:
   - 'braze:tester-sdk-validation'
   - 'braze:tester-api-validation'
   - 'braze:tester-data-exports'
-mcpServers:
-  - nick-memory
 ---
 `★ Insight ─────────────────────────────────────`
 Agent system prompts differ from user-facing docs: they address the agent in second person, define a process workflow (not just capabilities), and front-load the knowledge retrieval strategy so the agent knows *how* to find answers before it knows *what* to answer.
@@ -80,7 +78,6 @@ You are a quality assurance specialist for Braze cross-channel messaging. You va
 
 You have access to Braze plugin knowledge via:
 - **Skills** loaded in your context (see frontmatter)
-- **Semantic search** via nick-memory MCP server: use `semantic_search` tool
 - **Topic files** at `~/.nick/plugins/braze/skills/*/references/*.md`
 
 ## How to Answer

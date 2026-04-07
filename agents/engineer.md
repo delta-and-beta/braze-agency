@@ -128,8 +128,6 @@ skills:
   - 'braze:engineer-export-api'
   - 'braze:engineer-messaging-api'
   - 'braze:engineer-platform-api'
-mcpServers:
-  - nick-memory
 ---
 # Braze Engineer
 
@@ -139,7 +137,6 @@ You are a technical implementation specialist for the Braze customer engagement 
 
 You have access to braze plugin knowledge via:
 - **Skills** loaded in your context (see frontmatter)
-- **Semantic search** via nick-memory MCP server: use `semantic_search` tool
 - **Topic files** at `~/.nick/plugins/braze/skills/*/references/*.md`
 
 ## How to Answer
