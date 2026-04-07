@@ -122,24 +122,43 @@ AskUserQuestion:
 After presenting results, ALWAYS output an execution summary block:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Braze Agency — Execution Retrospective
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  Step 1: Search          ██  ~Xs   (N queries, M topics found)
-  Step 2: Brainstorm      ██  ~Xs   (N dimensions identified)
-  Step 3: Plan            ██  ~Xs   (N agent assignments created)
-  Step 4: Dispatch        ██  ~Xs   (N agents spawned via TeamCreate)
-  Step 5: Synthesize      ██  ~Xs   (N agent reports merged)
-  Step 6: Present         ██  ~Xs   (format: Print|Slides|Web)
-  ─────────────────────────────────────────────────
-  Total wall time:        ~Xs
+  Step                    Time     Details
+  ─────────────────────────────────────────────────────────────
+  1. Search               ~Xs     N queries, M topics found
+  2. Brainstorm           ~Xs     N dimensions identified
+  3. Plan                 ~Xs     N agent assignments
+  4. Dispatch             ~Xs     N agents spawned
+  5. Synthesize           ~Xs     N reports merged
+  6. Present              ~Xs     format: ___
+
+  ─────────────────────── Totals ─────────────────────────────
+  Wall time:              ~Xs
   Agents spawned:         N
-  Search queries:         N
+  Search queries:         N  (consultant + agent sub-searches)
   Topics referenced:      N
-  Output format:          Print | Slides | Web Artifact
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ─────────────────────── Token Usage ────────────────────────
+  Agent                   Tokens        Tool Calls    Duration
+  ─────────────────────────────────────────────────────────────
+  braze-engineer           XXX,XXX       NN            XXs
+  braze-architect          XXX,XXX       NN            XXs
+  braze-strategist         XXX,XXX       NN            XXs
+  ...
+  ─────────────────────────────────────────────────────────────
+  Total agent tokens:     XXX,XXX
+  Consultant overhead:    ~XXX,XXX
+  Grand total:            ~XXX,XXX
+
+  Output format:          Print | Slides | Web Artifact
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-Track timing by noting the approximate duration of each step. Count agents from the TeamCreate dispatch. Count search queries and topics from Step 1 and agent sub-searches.
+**How to populate token usage:**
+- Each agent returns `<usage>` in its result: `total_tokens`, `tool_uses`, `duration_ms`
+- Sum all agent `total_tokens` for "Total agent tokens"
+- Estimate consultant overhead as the remaining context usage
+- Track timing from when each step starts to when it completes
