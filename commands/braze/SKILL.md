@@ -18,36 +18,60 @@ braze-agency search "relevant query" --topic --limit 5
 braze-agency search --get-topic <topic-id>
 ```
 
-## Step 2: Assess Complexity
+## Step 2: Brainstorm
 
-Based on search results, count how many domains the question touches:
+Invoke the brainstorming skill to explore the problem space:
 
-| Domains | Complexity | Action |
-|---------|-----------|--------|
-| 1 | Simple | Dispatch to a single specialist agent |
-| 2+ | Complex | Use TeamCreate to spawn multiple specialists in parallel |
+```
+Skill(skill: "superpowers:brainstorming")
+```
 
-## Step 3: Execute
+Use the search results from Step 1 as input. The brainstorm should identify:
+- Key dimensions of the problem
+- Potential approaches and tradeoffs
+- Which specialist domains are involved
+- Edge cases and constraints to address
+
+## Step 3: Write Execution Plan
+
+Based on the brainstorm output, create a structured plan that assigns each specialist agent a **specific deliverable** with acceptance criteria:
+
+For each agent, define:
+- **Sub-question**: The precise question this agent must answer
+- **Context**: Relevant search results and brainstorm insights to include
+- **Expected output**: What format and detail level to return
+- **Search hints**: Specific `braze-agency search` queries to run
+
+## Step 4: Assess Complexity & Execute
+
+| Domains | Action |
+|---------|--------|
+| 1 | Dispatch to a single specialist agent |
+| 2+ | Use TeamCreate to spawn multiple specialists in parallel |
 
 ### Simple (1 domain) — dispatch one agent:
 ```
-Agent(subagent_type: "braze:<role>", prompt: "<focused question with search context>")
+Agent(subagent_type: "braze:<role>", prompt: "<sub-question + context + expected output from plan>")
 ```
 
 ### Complex (2+ domains) — create a team:
 ```
 TeamCreate(team_name: "braze-project")
 ```
-Then spawn ALL relevant specialists into the team. Give each a **focused sub-prompt**:
+Then spawn ALL agents from the plan. Each gets their **specific sub-question, context, and expected output**:
 ```
-Agent(subagent_type: "braze:<role>", team_name: "braze-project", name: "<role>", prompt: "<specific question for this role>")
+Agent(subagent_type: "braze:<role>", team_name: "braze-project", name: "<role>", prompt: "<full assignment from plan>")
 ```
 
-## Step 4: Synthesize
+## Step 5: Synthesize
 
-After all agents report back, synthesize findings into a unified answer.
+After all agents report back:
+1. Cross-reference findings against the execution plan
+2. Verify each agent delivered their expected output
+3. Resolve contradictions between specialist perspectives
+4. Synthesize into a unified answer
 
-## Step 5: Present
+## Step 6: Present
 
 Ask the user how they want the output:
 ```
@@ -78,8 +102,10 @@ AskUserQuestion:
 
 ## Rules
 
-- **ALWAYS search first** (Step 1) before deciding complexity
+- **ALWAYS search first** (Step 1) before brainstorming
+- **ALWAYS brainstorm** (Step 2) before planning — never skip straight to dispatching agents
+- **ALWAYS write an execution plan** (Step 3) with specific sub-questions per agent
 - **ALWAYS use TeamCreate** for 2+ domain questions — never answer complex questions solo
-- **ALWAYS ask for output format** (Step 5) after synthesis
+- **ALWAYS ask for output format** (Step 6) after synthesis
 - **Tell each agent** to use `braze-agency search` for their research
 - **Spawn agents in parallel** (single message with multiple Agent calls)
